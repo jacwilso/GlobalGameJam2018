@@ -24,7 +24,7 @@ public class ScenarioObject : ScriptableObject {
     {
         for (int i = 0; i < bystander.quantity; i++)
         {
-            Bystander by = Instantiate<Bystander>(bystander.bystander, parent.SpawnPosition, Quaternion.identity, parent.transform);
+            Bystander by = Instantiate<Bystander>(bystander.bystander, parent.SpawnArea, Quaternion.identity, parent.transform);
             by.SetDestination(parent.DestinationArea);
         }
     }
