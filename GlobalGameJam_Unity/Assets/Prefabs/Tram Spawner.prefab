@@ -53,7 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tramSpeed: 0.2
   tramForce: 2000
-  uppiness: 0
+  uppiness: 1000
   positionDelta: 0.5
   tram: {fileID: 180918, guid: 78bb67169d9bde2449a016d77ad53f46, type: 2}
   intersection: {fileID: 0}
