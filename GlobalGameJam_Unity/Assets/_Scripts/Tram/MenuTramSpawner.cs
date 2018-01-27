@@ -16,16 +16,26 @@ public class MenuTramSpawner : MonoBehaviour {
         get { return intersection; }
     }
 
+    public Transform Offscreen
+    {
+        get { return offscreen; }
+    }
+
     public BezierSpline Path
     {
         get { return (Random.Range(0, 2) == 1 ? leftCurve : rightCurve); }
+    }
+
+    public float PositionDelta
+    {
+        get { return positionDelta; }
     }
 
     [SerializeField] private float spawnRate;
     [SerializeField] private float tramSpeed;
     [SerializeField] private float positionDelta;
     [SerializeField] private GameObject tram;
-    [SerializeField] private Transform intersection;
+    [SerializeField] private Transform intersection, offscreen;
     [SerializeField] private BezierSpline leftCurve, rightCurve;
 
     private float elapsed;
@@ -41,6 +51,11 @@ public class MenuTramSpawner : MonoBehaviour {
             Debug.LogWarning("Have 2 TramSpawners you idiot.");
             Destroy(gameObject);
         }
+    }
+
+    private void Start()
+    {
+        Spawn();
     }
 
     private void Update () {

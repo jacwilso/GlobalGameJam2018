@@ -8,7 +8,7 @@ public class MenuTram : MonoBehaviour {
     [SerializeField] private GameObject skinLocation;
 
     private SplineWalker walker;
-    private bool pathSelected;
+    private bool pathSelected, offscreen;
 
     private void Start()
     {
@@ -18,9 +18,13 @@ public class MenuTram : MonoBehaviour {
 
     private void Update()
     {
-        if (!pathSelected && Mathf.Abs(transform.position.x - MenuTramSpawner.instance.Intersection.position.x) < TramSpawner.instance.PositionDelta)
+        if (!pathSelected && Mathf.Abs(transform.position.x - MenuTramSpawner.instance.Intersection.position.x) < MenuTramSpawner.instance.PositionDelta)
         {
             SelectPath();
+        }
+        else if (!offscreen && Mathf.Abs(transform.position.x - MenuTramSpawner.instance.Offscreen.position.x) < MenuTramSpawner.instance.PositionDelta)
+        {
+            Offscreen();
         }
         else
         {
@@ -35,22 +39,18 @@ public class MenuTram : MonoBehaviour {
         }
     }
 
-    private void OnBecameInvisible()
+    private void Offscreen()
     {
+        offscreen = true;
         Destroy(gameObject, 1f);
     }
 
     private void SelectPath()
     {
         pathSelected = true;
-        BezierSpline spline = TramSpawner.instance.Path;
+        BezierSpline spline = MenuTramSpawner.instance.Path;
         spline.transform.position = transform.position;
-        walker.spline = TramSpawner.instance.Path;
+        walker.spline = MenuTramSpawner.instance.Path;
         walker.enabled = true;
-        if (TramSpawner.instance.State == LeverState.Center)
-        {
-            this.enabled = false;
-            TramSpawner.instance.enabled = false;
-        }
     }
 }
