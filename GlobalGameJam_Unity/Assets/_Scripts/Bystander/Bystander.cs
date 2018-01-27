@@ -9,6 +9,8 @@ public class Bystander : MonoBehaviour {
     [Tooltip("The time between the tram leaving the screen and the bystanders entering onto the screen.")]
     public float waitTime;
 
+    [SerializeField] private SkinObject skins;
+
     protected NavMeshAgent agent;
     private bool hit;
 
