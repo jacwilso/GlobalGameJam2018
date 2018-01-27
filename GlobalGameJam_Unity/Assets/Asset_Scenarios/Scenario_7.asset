@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d3dd3b89559a024e873493e6a6d86b3, type: 3}
+  m_Name: Scenario_6
+  m_EditorClassIdentifier: 
+  bystanderTime: 1
+  tramTime: 4
+  leftBystanders:
+  - quantity: 30
+    bystander: {fileID: 114038640404407200, guid: b2111a5edf17dd240acabbb38dae7bab,
+      type: 2}
+  - quantity: 8
+    bystander: {fileID: 114906248628927892, guid: 6dd9f6a392679b94c8003f2bc6ec6a59,
+      type: 2}
+  rightBystanders:
+  - quantity: 30
+    bystander: {fileID: 114038640404407200, guid: b2111a5edf17dd240acabbb38dae7bab,
+      type: 2}
+  - quantity: 8
+    bystander: {fileID: 114906248628927892, guid: 6dd9f6a392679b94c8003f2bc6ec6a59,
+      type: 2}

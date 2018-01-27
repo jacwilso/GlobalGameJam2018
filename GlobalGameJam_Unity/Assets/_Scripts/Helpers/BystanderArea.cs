@@ -15,6 +15,7 @@ public class BystanderArea : MonoBehaviour {
         {
             if (index >= spawn.Length)
             {
+                index = 0;
                 for (int i = 0; i < spawn.Length - 1; i++)
                 {
                     for (int j = i; j < spawn.Length; j++)
@@ -25,7 +26,7 @@ public class BystanderArea : MonoBehaviour {
                     }
                 }
             }
-            return spawn[index].SpawnLocation;
+            return spawn[index++].SpawnLocation;
         }
     }
 

@@ -10,19 +10,24 @@ public class Tram : MonoBehaviour {
 
     private bool pathSelected, offscreen;
     private SplineWalker walker;
+    private Renderer rend;
 
     private void Start()
     {
         walker = GetComponent<SplineWalker>();
         walker.enabled = false;
         skinLocation.GetComponent<Renderer>().material = skins.Skin;
+        rend = GetComponent<Renderer>();
     }
 
     private void Update () {
 		if (!pathSelected && Mathf.Abs(transform.position.x - TramSpawner.instance.Intersection.position.x) < TramSpawner.instance.PositionDelta)
         {
             SelectPath();
-        } else
+        } else if (!offscreen && Mathf.Abs(transform.position.x - TramSpawner.instance.Offscreen.position.x) < TramSpawner.instance.PositionDelta)
+        {
+            Offscreen();
+        } else 
         {
             if (!walker.enabled)
             {
@@ -65,7 +70,7 @@ public class Tram : MonoBehaviour {
         }
     }
 
-    private void OnBecameInvisible()
+    private void Offscreen()
     {
         if (!pathSelected)
         {

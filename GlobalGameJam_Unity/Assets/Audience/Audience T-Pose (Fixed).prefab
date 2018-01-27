@@ -1458,7 +1458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb2d34d8afea8844082e00f777419cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0
+  waitTime: 1
   skins: {fileID: 0}
   skinLocation: {fileID: 0}
   pctRunning: 0

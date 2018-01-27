@@ -212,6 +212,7 @@ GameObject:
   - component: {fileID: 23233245479963938}
   - component: {fileID: 65247622310746020}
   - component: {fileID: 54174213503893128}
+  - component: {fileID: 114080539615428982}
   - component: {fileID: 114203807478374616}
   m_Layer: 0
   m_Name: Tram_menu
@@ -972,6 +973,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.12, y: 2.09, z: 5.6}
   m_Center: {x: 0, y: 1.11, z: 0}
+--- !u!114 &114080539615428982
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 180918}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 541a76f9c03874323b5154b14ac00427, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spline: {fileID: 0}
+  duration: 2
+  lookForward: 1
+  mode: 0
 --- !u!114 &114203807478374616
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -983,6 +999,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8befb802eb964e34cbf496a86da87483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.3
-  skins: {fileID: 0}
-  skinLocation: {fileID: 0}
+  skins: {fileID: 11400000, guid: a000320a77d8fb24db0dfaf81c0c179a, type: 2}
+  skinLocation: {fileID: 105942}
