@@ -5,6 +5,9 @@ using UnityEngine;
 [RequireComponent (typeof(SplineWalker), typeof(Rigidbody), typeof(BoxCollider))]
 public class Tram : MonoBehaviour {
 
+    [SerializeField] private SkinObject skins;
+    [SerializeField] private GameObject skinLocation;
+
     private bool pathSelected, offscreen;
     private SplineWalker walker;
 
@@ -12,6 +15,7 @@ public class Tram : MonoBehaviour {
     {
         walker = GetComponent<SplineWalker>();
         walker.enabled = false;
+        skinLocation.GetComponent<Renderer>().material = skins.Skin;
     }
 
     private void Update () {
@@ -39,7 +43,7 @@ public class Tram : MonoBehaviour {
         if (collision.gameObject.GetComponent<Bystander>())
         {
             Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
-            Vector3 direction = ((Vector3)Random.insideUnitCircle + transform.forward);
+            Vector3 direction = ((Vector3)Random.insideUnitCircle + transform.forward) + TramSpawner.instance.Uppiness * Vector3.up;
             rb.AddForce(TramSpawner.instance.TramForce * transform.forward);
         }
     }

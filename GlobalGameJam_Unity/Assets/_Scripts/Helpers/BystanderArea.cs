@@ -9,18 +9,45 @@ public class BystanderArea : MonoBehaviour {
         get { return transform.position + RectangleVec2toVec3(size); }
     }
 
-    public Vector3 SpawnPosition
+    public Vector3 SpawnArea
     {
-        get { return transform.position + CircleVec2toVec3(spawnRadius); }
+        get
+        {
+            if (index >= spawn.Length)
+            {
+                for (int i = 0; i < spawn.Length - 1; i++)
+                {
+                    for (int j = i; j < spawn.Length; j++)
+                    {
+                        BystanderSpawn tmp = spawn[i];
+                        spawn[i] = spawn[j];
+                        spawn[j] = tmp;
+                    }
+                }
+            }
+            return spawn[index].SpawnLocation;
+        }
+    }
+
+    public Color SpawnAreaColor
+    {
+        get { return spawnAreaColor; }
     }
 
     [SerializeField] private Vector2 size = new Vector2(5, 1);
-    [SerializeField] private float spawnRadius = 20f;
     [SerializeField] private Color trackAreaColor = Color.yellow;
     [SerializeField] private Color spawnAreaColor = Color.green;
 
-    private void Start ()
+    private BystanderSpawn[] spawn;
+    private static int index;
+
+    private void Start()
     {
+        spawn = GetComponentsInChildren<BystanderSpawn>();
+        if (spawn.Length == 0)
+        {
+            Debug.LogError("NO SPAWN AREAS FOR " + gameObject.name);
+        }
     }
 
     private void OnDrawGizmos()
@@ -34,14 +61,6 @@ public class BystanderArea : MonoBehaviour {
           };
         UnityEditor.Handles.color = trackAreaColor;
         UnityEditor.Handles.DrawSolidRectangleWithOutline(verts, trackAreaColor, trackAreaColor);
-        UnityEditor.Handles.color = spawnAreaColor;
-        UnityEditor.Handles.DrawWireDisc(transform.position, Vector3.up, spawnRadius);
-    }
-
-    private Vector3 CircleVec2toVec3(float size)
-    {
-        Vector2 circle = Random.insideUnitCircle;
-        return new Vector3(circle.x, 0, circle.y) + new Vector3(size, 0, size);
     }
 
     private Vector3 RectangleVec2toVec3(Vector2 size)

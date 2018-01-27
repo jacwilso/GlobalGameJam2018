@@ -10,12 +10,17 @@ public class Bystander : MonoBehaviour {
     public float waitTime;
 
     [SerializeField] private SkinObject skins;
+    [SerializeField] private GameObject skinLocation;
 
     protected NavMeshAgent agent;
     private bool hit;
 
     protected virtual void Start () {
         agent = GetComponent<NavMeshAgent>();
+        if (skins != null && skinLocation != null)
+        {
+            skinLocation.GetComponent<Renderer>().material = skins.Skin;
+        }
     }
 
     protected virtual void Update () {
