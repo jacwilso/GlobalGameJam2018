@@ -46,7 +46,7 @@ public class TramSpawner : MonoBehaviour {
         get { return tramSpeed; }
     }
 
-    public float TramForce
+    public Vector2 TramForce
     {
         get { return tramForce; }
     }
@@ -61,8 +61,9 @@ public class TramSpawner : MonoBehaviour {
         get { return positionDelta; }
     }
 
-    [SerializeField] private float tramSpeed, tramForce, uppiness;
-    [SerializeField] private float positionDelta;
+    [SerializeField] private float tramSpeed, uppiness;
+	[SerializeField] private Vector2 tramForce;
+	[SerializeField] private float positionDelta;
     [SerializeField] private GameObject tram;
     [SerializeField] private Transform intersection, offscreen;
     [SerializeField] private BezierSpline leftCurve, rightCurve, centerCurve;

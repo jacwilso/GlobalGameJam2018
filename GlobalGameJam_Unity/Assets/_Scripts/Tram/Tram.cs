@@ -43,7 +43,9 @@ public class Tram : MonoBehaviour {
     {
         if (collision.gameObject.GetComponent<Bystander>())
         {
-            Vector3 direction = ((Vector3)Random.insideUnitCircle + transform.forward) + TramSpawner.instance.Uppiness * Vector3.up;
+			Vector3 direction = ((Vector3)Random.insideUnitCircle + transform.forward);
+			direction.y = Mathf.Abs(direction.y);
+			direction += TramSpawner.instance.Uppiness * Vector3.up;
 
 			Ragdoll ragdoll = collision.gameObject.GetComponent<Ragdoll>();
 
@@ -65,7 +67,7 @@ public class Tram : MonoBehaviour {
 			{
 				rr.isKinematic = false;
 				rr.useGravity = true;
-				rr.AddForce(TramSpawner.instance.TramForce * direction, ForceMode.Impulse);
+				rr.AddForce(Random.Range(TramSpawner.instance.TramForce.x, TramSpawner.instance.TramForce.y) * direction, ForceMode.Impulse);
 			}
         }
     }
