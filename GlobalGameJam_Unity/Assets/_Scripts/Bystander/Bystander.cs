@@ -13,7 +13,7 @@ public class Bystander : MonoBehaviour {
     [SerializeField] private GameObject skinLocation;
 
     protected NavMeshAgent agent;
-    private bool hit;
+    private bool wasVisible;
 
     protected virtual void Start () {
         agent = GetComponent<NavMeshAgent>();
@@ -37,23 +37,20 @@ public class Bystander : MonoBehaviour {
         }
     }
 
+    protected virtual void OnBecameVisible()
+    {
+        wasVisible = true;
+    }
+
     protected virtual void OnBecameInvisible()
     {
-        if (hit)
+        if (wasVisible)
         {
             Destroy(gameObject, 1f);
         }
     }
 
-    protected virtual void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.GetComponent<Tram>())
-        {
-            hit = true;
-        }
-    }
-
-    public void SetDestination(Vector3 point)
+    public virtual void SetDestination(Vector3 point)
     {
         if (agent == null)
         {
