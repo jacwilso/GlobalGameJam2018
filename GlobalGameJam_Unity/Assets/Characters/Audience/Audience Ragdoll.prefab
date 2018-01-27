@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 195449595521252626}
   - component: {fileID: 114038640404407200}
   m_Layer: 0
-  m_Name: Audience T-Pose (Fixed)
+  m_Name: Audience Ragdoll
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1473,6 +1473,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b1467ae500c6c14590b0687928a8fdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  preRagdollCollider: {fileID: 0}
+  ragdollColliders: []
+  preRagdollRigidbody: {fileID: 0}
+  ragdollRigidbodies: []
+  animator: {fileID: 0}
 --- !u!135 &135319927717383796
 SphereCollider:
   m_ObjectHideFlags: 1

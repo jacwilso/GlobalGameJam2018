@@ -68,12 +68,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4674489867591528}
-  - component: {fileID: 95439177528692764}
   - component: {fileID: 65512220795030806}
   - component: {fileID: 54313542484991004}
   - component: {fileID: 65775088840369948}
-  - component: {fileID: 114906248628927892}
   - component: {fileID: 195221459817041600}
+  - component: {fileID: 114647889314729708}
   m_Layer: 0
   m_Name: Classic_16
   m_TagString: Untagged
@@ -1914,23 +1913,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!95 &95439177528692764
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1144341235132780}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 000e268602069ee41b503cc210240ef7, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!95 &95440158981968708
 Animator:
   serializedVersion: 3
@@ -1982,7 +1964,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114906248628927892
+--- !u!114 &114647889314729708
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1990,13 +1972,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1144341235132780}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb2d34d8afea8844082e00f777419cf3, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b8693447cfc744469b38b05e7a29d56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   waitTime: 0
   skins: {fileID: 0}
   skinLocation: {fileID: 0}
-  pctRunning: 0
 --- !u!137 &137112582175993140
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -2205,7 +2186,7 @@ NavMeshAgent:
   m_Speed: 3.5
   m_Acceleration: 15
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 20
   m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
