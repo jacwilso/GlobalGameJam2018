@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d3dd3b89559a024e873493e6a6d86b3, type: 3}
-  m_Name: Scenario_1
+  m_Name: Scenario_2
   m_EditorClassIdentifier: 
   bystanderTime: 1
   tramTime: 8
@@ -23,6 +23,9 @@ MonoBehaviour:
   - quantity: 10
     bystander: {fileID: 114050713796372472, guid: a593ffef11c96604988afabc72f6904e,
       type: 2}
+  - quantity: 1
+    bystander: {fileID: 114906248628927892, guid: 6dd9f6a392679b94c8003f2bc6ec6a59,
+      type: 2}
   rightBystanders:
   - quantity: 4
     bystander: {fileID: 114617212048376254, guid: 3880f8bfaacfb6843880b99fa38284f3,
@@ -32,4 +35,7 @@ MonoBehaviour:
       type: 2}
   - quantity: 10
     bystander: {fileID: 114050713796372472, guid: a593ffef11c96604988afabc72f6904e,
+      type: 2}
+  - quantity: 1
+    bystander: {fileID: 114906248628927892, guid: 6dd9f6a392679b94c8003f2bc6ec6a59,
       type: 2}
