@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class BystanderArea : MonoBehaviour {
 
-    public float Radius
+    public Vector3 DestinationArea
     {
-        get { return radius; }
+        get { return transform.position + radius * (Vector3)Random.insideUnitCircle; }
     }
 
+    public Vector3 SpawnPosition
+    {
+        get { return transform.position + outerRadius * (Vector3)Random.insideUnitCircle; }
+    }
+
+    [SerializeField] private float outerRadius = 20f;
     [SerializeField] private Color editorColor = Color.yellow;
 
     private CircleCollider2D circle;

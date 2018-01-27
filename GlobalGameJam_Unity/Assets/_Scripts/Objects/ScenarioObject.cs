@@ -10,12 +10,13 @@ public class ScenarioObject : ScriptableObject {
     public float tramTime;
     public BystanderObject[] leftBystanders, rightBystanders;
 
-    public void Spawn(LeverState state, GameObject parent)
+    public void Spawn(LeverState state, BystanderManager parent)
     {
+        BystanderArea area = parent.StateArea(state);
         BystanderObject[] bystanders = (state == LeverState.Left) ? rightBystanders : leftBystanders;
         for (int i = 0; i < bystanders.Length; i++)
         {
-            bystanders[i].Spawn(parent);
+            bystanders[i].Spawn(area);
         }
     }
 }

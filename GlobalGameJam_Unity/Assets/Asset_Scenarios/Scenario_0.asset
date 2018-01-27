@@ -13,5 +13,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bystanderTime: 0
   tramTime: 0
-  leftBystanders: []
+  leftBystanders:
+  - {fileID: 11400000, guid: 16ff7884a7ed47a4f8f77cdf75f70fe3, type: 2}
   rightBystanders: []

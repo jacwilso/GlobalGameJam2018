@@ -6,7 +6,6 @@ public class Tram : MonoBehaviour {
 
     private bool pathSelected, offscreen;
     private SplineWalker walker;
-    private LeverState leverState;
 
     private void Start()
     {
@@ -39,8 +38,7 @@ public class Tram : MonoBehaviour {
         pathSelected = true;
         walker.spline = TramSpawner.instance.Path;
         walker.enabled = true;
-        leverState = TramSpawner.instance.State;
-        if (leverState == LeverState.Center)
+        if (TramSpawner.instance.State == LeverState.Center)
         {
             this.enabled = false;
             TramSpawner.instance.enabled = false;
@@ -49,7 +47,7 @@ public class Tram : MonoBehaviour {
 
     private void OffScreen()
     {
-        offscreen = false;
+        offscreen = true;
         TramSpawner.instance.BringInBystanders();
         Destroy(gameObject, 3f);
     }

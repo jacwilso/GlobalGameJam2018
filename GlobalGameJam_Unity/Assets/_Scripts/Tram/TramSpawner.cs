@@ -34,7 +34,11 @@ public class TramSpawner : MonoBehaviour {
 
     public LeverState State
     {
-        get { return lever.State; }
+        get
+        {
+            lastState = lever.State;
+            return lever.State;
+        }
     }
 
     public float TramSpeed
@@ -52,11 +56,11 @@ public class TramSpawner : MonoBehaviour {
     [SerializeField] private GameObject tram;
     [SerializeField] private Transform intersection, offscreen;
     [SerializeField] private BezierSpline leftCurve, rightCurve, centerCurve;
-    [SerializeField] private GameObject peopleParent;
+    [SerializeField] private BystanderManager bystanderManager;
     [SerializeField] private ScenarioObject[] scenarios;
 
-    private float elapsed;
     private LeverController lever;
+    private LeverState lastState;
     private int scenarioIndex;
 
     private void Awake()
@@ -87,7 +91,6 @@ public class TramSpawner : MonoBehaviour {
 
     private void Spawn()
     {
-        elapsed = 0f;
         Instantiate(tram, transform.position, transform.rotation, transform);
     }
 
@@ -105,7 +108,7 @@ public class TramSpawner : MonoBehaviour {
     private IEnumerator WaitBystander()
     {
         yield return new WaitForSeconds(scenarios[scenarioIndex].bystanderTime);
-        scenarios[scenarioIndex].Spawn(lever.State, peopleParent);
+        scenarios[scenarioIndex].Spawn(lastState, bystanderManager);
         StartCoroutine(WaitSpawn());
     }
 
