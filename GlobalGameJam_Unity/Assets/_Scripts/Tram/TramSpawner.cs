@@ -46,12 +46,17 @@ public class TramSpawner : MonoBehaviour {
         get { return tramSpeed; }
     }
 
+    public float TramForce
+    {
+        get { return tramForce; }
+    }
+
     public float PositionDelta
     {
         get { return positionDelta; }
     }
 
-    [SerializeField] private float tramSpeed;
+    [SerializeField] private float tramSpeed, tramForce;
     [SerializeField] private float positionDelta;
     [SerializeField] private GameObject tram;
     [SerializeField] private Transform intersection, offscreen;

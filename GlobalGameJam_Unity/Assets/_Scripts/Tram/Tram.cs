@@ -33,6 +33,16 @@ public class Tram : MonoBehaviour {
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.GetComponent<Bystander>())
+        {
+            Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
+            Vector3 direction = ((Vector3)Random.insideUnitCircle + transform.forward);
+            rb.AddForce(TramSpawner.instance.TramForce * transform.forward);
+        }
+    }
+
     private void SelectPath()
     {
         pathSelected = true;
