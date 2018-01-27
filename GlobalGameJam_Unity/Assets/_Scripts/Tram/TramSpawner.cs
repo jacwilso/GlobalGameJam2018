@@ -10,7 +10,7 @@ public class TramSpawner : MonoBehaviour {
         get { return intersection; }
     }
 
-    public Transform OffScreen
+    public Transform Offscreen
     {
         get { return offscreen; }
     }

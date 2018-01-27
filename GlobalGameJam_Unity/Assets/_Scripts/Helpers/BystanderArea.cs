@@ -25,7 +25,8 @@ public class BystanderArea : MonoBehaviour {
                     }
                 }
             }
-            return spawn[index].SpawnLocation;
+            Debug.Log(index + spawn.Length);
+            return spawn[index++].SpawnLocation;
         }
     }
 

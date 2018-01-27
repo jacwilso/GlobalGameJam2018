@@ -4,14 +4,43 @@ using UnityEngine;
 
 public class MenuTramSpawner : MonoBehaviour {
 
-    [SerializeField] private GameObject tram;
+    public static MenuTramSpawner instance;
+
+    public float TramSpeed
+    {
+        get { return tramSpeed; }
+    }
+
+    public Transform Intersection
+    {
+        get { return intersection; }
+    }
+
+    public BezierSpline Path
+    {
+        get { return (Random.Range(0, 2) == 1 ? leftCurve : rightCurve); }
+    }
+
     [SerializeField] private float spawnRate;
+    [SerializeField] private float tramSpeed;
+    [SerializeField] private float positionDelta;
+    [SerializeField] private GameObject tram;
+    [SerializeField] private Transform intersection;
+    [SerializeField] private BezierSpline leftCurve, rightCurve;
 
     private float elapsed;
 
-    private void Start()
+    private void Awake()
     {
-        Spawn();
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Debug.LogWarning("Have 2 TramSpawners you idiot.");
+            Destroy(gameObject);
+        }
     }
 
     private void Update () {
@@ -25,6 +54,6 @@ public class MenuTramSpawner : MonoBehaviour {
     private void Spawn()
     {
         elapsed = 0f;
-        Instantiate(tram, transform);
+        Instantiate(tram, transform.position, transform.rotation, transform);
     }
 }
