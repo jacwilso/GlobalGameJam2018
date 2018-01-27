@@ -985,7 +985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spline: {fileID: 0}
-  duration: 2
+  duration: 0.7
   lookForward: 1
   mode: 0
 --- !u!114 &114203807478374616
