@@ -5,14 +5,19 @@ using UnityEngine;
 [RequireComponent(typeof(Collider), typeof(Rigidbody))]
 public class Ragdoll : MonoBehaviour {
 
+	[HideInInspector]
 	public Collider preRagdollCollider;
 
+	[HideInInspector]
 	public Collider[] ragdollColliders;
 
+	[HideInInspector]
 	public Rigidbody preRagdollRigidbody;
 
+	[HideInInspector]
 	public Rigidbody[] ragdollRigidbodies;
 
+	[HideInInspector]
 	public Animator animator;
 
 	// Use this for initialization
