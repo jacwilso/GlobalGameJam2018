@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour {
 
-    public const string Main_Scene = "main";
+    [SerializeField] private string Main_Scene = "main";
 
     public void StartGame()
     {

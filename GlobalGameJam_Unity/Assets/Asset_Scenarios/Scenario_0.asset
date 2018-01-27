@@ -11,8 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d3dd3b89559a024e873493e6a6d86b3, type: 3}
   m_Name: Scenario_0
   m_EditorClassIdentifier: 
-  bystanderTime: 2
-  tramTime: 4
+  bystanderTime: 1
+  tramTime: 6
   leftBystanders:
   - quantity: 5
     bystander: {fileID: 114038640404407200, guid: b2111a5edf17dd240acabbb38dae7bab,
