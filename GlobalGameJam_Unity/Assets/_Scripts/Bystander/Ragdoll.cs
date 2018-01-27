@@ -5,15 +5,15 @@ using UnityEngine;
 [RequireComponent(typeof(Collider), typeof(Rigidbody))]
 public class Ragdoll : MonoBehaviour {
 
-	Collider preRagdollCollider;
+	public Collider preRagdollCollider;
 
-	Collider[] ragdollColliders;
+	public Collider[] ragdollColliders;
 
-	Rigidbody preRagdollRigidbody;
+	public Rigidbody preRagdollRigidbody;
 
-	Rigidbody[] ragdollRigidbodies;
+	public Rigidbody[] ragdollRigidbodies;
 
-	Animator animator;
+	public Animator animator;
 
 	// Use this for initialization
 	void Start () {
@@ -59,9 +59,10 @@ public class Ragdoll : MonoBehaviour {
 	{
 		if (collision.collider.GetComponent<Tram>())
 		{
-			preRagdollCollider.enabled = false;
+			// This gets called in the Tram.cs OnCollisionEnter function now to avoid ordering issue
+			/*preRagdollCollider.enabled = false;
 			preRagdollRigidbody.useGravity = false;
-			//preRagdollRigidbody.isKinematic = true;
+			preRagdollRigidbody.isKinematic = true;
 
 			foreach (Collider rc in ragdollColliders)
 			{
@@ -74,7 +75,7 @@ public class Ragdoll : MonoBehaviour {
 				rr.isKinematic = false;
 			}
 
-			animator.enabled = false;
+			animator.enabled = false;*/
 		}
 	}
 }
