@@ -46,6 +46,7 @@ public class Ragdoll : MonoBehaviour {
 
 			ragdollRigidbodies[index] = r;
 			r.useGravity = false;
+			r.isKinematic = true;
 			index++;
 		}
 	}
@@ -55,7 +56,8 @@ public class Ragdoll : MonoBehaviour {
 		if (collision.collider.GetComponent<Tram>())
 		{
 			preRagdollCollider.enabled = false;
-			//preRagdollRigidbody.useGravity = false;
+			preRagdollRigidbody.useGravity = false;
+			//preRagdollRigidbody.isKinematic = true;
 
 			foreach (Collider rc in ragdollColliders)
 			{
@@ -65,6 +67,7 @@ public class Ragdoll : MonoBehaviour {
 			foreach (Rigidbody rr in ragdollRigidbodies)
 			{
 				rr.useGravity = true;
+				rr.isKinematic = false;
 			}
 		}
 	}
