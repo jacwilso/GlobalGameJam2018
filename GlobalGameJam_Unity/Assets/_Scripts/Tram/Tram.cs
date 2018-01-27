@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent (typeof(SplineWalker), typeof(Rigidbody), typeof(BoxCollider))]
 public class Tram : MonoBehaviour {
 
     private bool pathSelected, offscreen;
