@@ -34,7 +34,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1400435369474660}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -7.4, y: 0.9, z: 0}
+  m_LocalPosition: {x: -34.1, y: 0.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tramSpeed: 0.2
-  tramForce: 2000
+  tramForce: 3000
   uppiness: 1000
   positionDelta: 0.5
   tram: {fileID: 180918, guid: 78bb67169d9bde2449a016d77ad53f46, type: 2}
@@ -68,8 +68,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 65c2d37cee7b6544fa0d2e66531189cb, type: 2}
   - {fileID: 11400000, guid: 2ab58aa73aa9fcb49bb7f393afa86ccd, type: 2}
   - {fileID: 11400000, guid: 1ae8e6eaf8b8bfd44b11e1457b34fe6b, type: 2}
-  - {fileID: 11400000, guid: 1ae8e6eaf8b8bfd44b11e1457b34fe6b, type: 2}
-  - {fileID: 11400000, guid: 1ae8e6eaf8b8bfd44b11e1457b34fe6b, type: 2}
-  - {fileID: 11400000, guid: 1ae8e6eaf8b8bfd44b11e1457b34fe6b, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: d42eeb141baa0a345b7a42b7a98dff8b, type: 2}
+  - {fileID: 11400000, guid: efe8522eb591f1e4480f4477094ac9ab, type: 2}
+  - {fileID: 11400000, guid: e92dce8efd9b0264ebfd850e509a04cf, type: 2}
+  - {fileID: 11400000, guid: e92dce8efd9b0264ebfd850e509a04cf, type: 2}
+  - {fileID: 11400000, guid: e92dce8efd9b0264ebfd850e509a04cf, type: 2}
