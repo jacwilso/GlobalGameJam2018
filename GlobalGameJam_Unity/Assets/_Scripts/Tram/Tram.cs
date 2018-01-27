@@ -38,9 +38,30 @@ public class Tram : MonoBehaviour {
     {
         if (collision.gameObject.GetComponent<Bystander>())
         {
-            Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
             Vector3 direction = ((Vector3)Random.insideUnitCircle + transform.forward) + TramSpawner.instance.Uppiness * Vector3.up;
-            rb.AddForce(TramSpawner.instance.TramForce * transform.forward);
+
+			Ragdoll ragdoll = collision.gameObject.GetComponent<Ragdoll>();
+
+			ragdoll.animator.enabled = false;
+
+			// Disable the pre-ragdoll collider and rigidbody
+			ragdoll.preRagdollCollider.enabled = false;
+			ragdoll.preRagdollRigidbody.useGravity = false;
+			ragdoll.preRagdollRigidbody.isKinematic = true;
+
+			// Enable every collider in the bystander ragdoll
+			foreach (Collider rc in ragdoll.ragdollColliders)
+			{
+				rc.enabled = true;
+			}
+
+			// Set every rigidbody in the bystander ragdoll to the appropriate values and apply a force
+			foreach (Rigidbody rr in ragdoll.ragdollRigidbodies)
+			{
+				rr.isKinematic = false;
+				rr.useGravity = true;
+				rr.AddForce(TramSpawner.instance.TramForce * direction, ForceMode.Impulse);
+			}
         }
     }
 
