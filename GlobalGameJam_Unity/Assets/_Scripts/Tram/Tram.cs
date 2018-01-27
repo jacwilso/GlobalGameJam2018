@@ -24,10 +24,6 @@ public class Tram : MonoBehaviour {
             SelectPath();
         } else
         {
-            if (!offscreen && Mathf.Abs(transform.position.x - TramSpawner.instance.OffScreen.position.x) < 2f * TramSpawner.instance.PositionDelta)
-            {
-                OffScreen();
-            }
             if (!walker.enabled)
             {
                 transform.position += TramSpawner.instance.TramSpeed * transform.forward;
@@ -48,6 +44,17 @@ public class Tram : MonoBehaviour {
         }
     }
 
+    private void OnBecameInvisible()
+    {
+        if (!pathSelected)
+        {
+            return;
+        }
+        offscreen = true;
+        TramSpawner.instance.BringInBystanders();
+        Destroy(gameObject, 3f);
+    }
+
     private void SelectPath()
     {
         pathSelected = true;
@@ -60,12 +67,5 @@ public class Tram : MonoBehaviour {
             this.enabled = false;
             TramSpawner.instance.enabled = false;
         }
-    }
-
-    private void OffScreen()
-    {
-        offscreen = true;
-        TramSpawner.instance.BringInBystanders();
-        Destroy(gameObject, 3f);
     }
 }

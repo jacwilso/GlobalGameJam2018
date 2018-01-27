@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: f7580897cc348ee42bf938665a6778b6
-timeCreated: 1517083890
+guid: b009db3e01750224ca6a7c5da90e0c22
+timeCreated: 1517085804
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -9,66 +9,35 @@ ModelImporter:
     100002: Floor
     100004: Light
     100006: //RootNode
-    100008: RAYC
-    100010: rayC
-    100012: RAYH
-    100014: rayH
-    100016: studio
-    100018: taslarC
-    100020: taslarH
+    100008: RAYH
+    100010: rayH
+    100012: rayH 1
+    100014: rayH 2
+    100016: RAYH1
+    100018: studio
     400000: Cinema4D_Editor
     400002: Floor
     400004: Light
     400006: //RootNode
-    400008: RAYC
-    400010: rayC
-    400012: RAYH
-    400014: rayH
-    400016: studio
-    400018: taslarC
-    400020: taslarH
+    400008: RAYH
+    400010: rayH
+    400012: rayH 1
+    400014: rayH 2
+    400016: RAYH1
+    400018: studio
     2100000: ray
-    2100002: taslar
-    2300000: rayC
-    2300002: rayH
-    2300004: taslarC
-    2300006: taslarH
-    3300000: rayC
-    3300002: rayH
-    3300004: taslarC
-    3300006: taslarH
-    4300000: rayC
-    4300002: taslarC
+    2300000: rayH
+    2300002: rayH 1
+    2300004: rayH 2
+    3300000: rayH
+    3300002: rayH 1
+    3300004: rayH 2
+    4300000: rayH
+    4300002: rayH
     4300004: rayH
-    4300006: taslarH
     9500000: //RootNode
     10800000: Light
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: ray
-    second: {fileID: 2100000, guid: 7778dbde6bb5efa4494d780b2d324df3, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: taslar
-    second: {fileID: 2100000, guid: bc917194b0b60ed489710c2cf0160edc, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: kalas
-    second: {fileID: 2800000, guid: 0460f67d69198684e9c7868ef169c04c, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: ray
-    second: {fileID: 2800000, guid: cfb5c35c35f0fac47bc6a26ab84991c6, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: taslar
-    second: {fileID: 2800000, guid: d463ed91e2d5266429e9cc314ca95393, type: 3}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
