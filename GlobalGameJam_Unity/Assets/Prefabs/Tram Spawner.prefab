@@ -51,10 +51,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96c258405375e9144915727dad26eabc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tramSpeed: 10
+  tramSpeed: 0.1
   tramForce: 1000
+  uppiness: 0
   positionDelta: 0.5
-  tram: {fileID: 180918, guid: 823661e26ed6a3c42b3997fe731d57f4, type: 2}
+  tram: {fileID: 180918, guid: 78bb67169d9bde2449a016d77ad53f46, type: 2}
   intersection: {fileID: 0}
   offscreen: {fileID: 0}
   leftCurve: {fileID: 0}
@@ -66,4 +67,3 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 40d2ad6b1bacf634f99fa25cf0bf5f2c, type: 2}
   - {fileID: 11400000, guid: 65c2d37cee7b6544fa0d2e66531189cb, type: 2}
   - {fileID: 11400000, guid: 2ab58aa73aa9fcb49bb7f393afa86ccd, type: 2}
-  - {fileID: 0}

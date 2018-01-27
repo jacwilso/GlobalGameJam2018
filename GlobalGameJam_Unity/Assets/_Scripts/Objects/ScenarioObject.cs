@@ -22,6 +22,11 @@ public class ScenarioObject : ScriptableObject {
 
     public void SpawnBystanders(BystanderMap bystander, BystanderArea parent)
     {
+        if (bystander.bystander == null)
+        {
+            Debug.LogWarning("Empty scenario audience");
+            return;
+        }
         for (int i = 0; i < bystander.quantity; i++)
         {
             Bystander by = Instantiate<Bystander>(bystander.bystander, parent.SpawnArea, Quaternion.identity, parent.transform);

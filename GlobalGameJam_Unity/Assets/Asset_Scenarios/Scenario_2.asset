@@ -18,12 +18,6 @@ MonoBehaviour:
     bystander: {fileID: 114617212048376254, guid: 3880f8bfaacfb6843880b99fa38284f3,
       type: 2}
   - quantity: 4
-    bystander: {fileID: 114027328830285278, guid: 76a4ddcefddf783499cac977dc6638e6,
-      type: 2}
-  - quantity: 10
-    bystander: {fileID: 114050713796372472, guid: a593ffef11c96604988afabc72f6904e,
-      type: 2}
-  - quantity: 1
     bystander: {fileID: 114906248628927892, guid: 6dd9f6a392679b94c8003f2bc6ec6a59,
       type: 2}
   rightBystanders:
@@ -31,11 +25,5 @@ MonoBehaviour:
     bystander: {fileID: 114617212048376254, guid: 3880f8bfaacfb6843880b99fa38284f3,
       type: 2}
   - quantity: 4
-    bystander: {fileID: 114027328830285278, guid: 76a4ddcefddf783499cac977dc6638e6,
-      type: 2}
-  - quantity: 10
-    bystander: {fileID: 114050713796372472, guid: a593ffef11c96604988afabc72f6904e,
-      type: 2}
-  - quantity: 1
     bystander: {fileID: 114906248628927892, guid: 6dd9f6a392679b94c8003f2bc6ec6a59,
       type: 2}
