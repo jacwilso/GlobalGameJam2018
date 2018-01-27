@@ -8,15 +8,24 @@ public class ScenarioObject : ScriptableObject {
     public float bystanderTime;
     [Tooltip("The time between when the bystanders arrive and when the next tram comes.")]
     public float tramTime;
-    public BystanderObject[] leftBystanders, rightBystanders;
+    public BystanderMap[] leftBystanders, rightBystanders;
 
     public void Spawn(LeverState state, BystanderManager parent)
     {
         BystanderArea area = parent.StateArea(state);
-        BystanderObject[] bystanders = (state == LeverState.Left) ? rightBystanders : leftBystanders;
+        BystanderMap[] bystanders = (state == LeverState.Left) ? rightBystanders : leftBystanders;
         for (int i = 0; i < bystanders.Length; i++)
         {
-            bystanders[i].Spawn(area);
+            SpawnBystanders(bystanders[i], area);
+        }
+    }
+
+    public void SpawnBystanders(BystanderMap bystander, BystanderArea parent)
+    {
+        for (int i = 0; i < bystander.quantity; i++)
+        {
+            Bystander by = Instantiate<Bystander>(bystander.bystander, parent.SpawnPosition, Quaternion.identity, parent.transform);
+            by.SetDestination(parent.DestinationArea);
         }
     }
 }

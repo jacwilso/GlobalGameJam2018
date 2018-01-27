@@ -11,9 +11,9 @@ public class BystanderManager : MonoBehaviour {
         switch(state)
         {
             case LeverState.Left:
-                return right;
-            case LeverState.Right:
                 return left;
+            case LeverState.Right:
+                return right;
             case LeverState.Center:
                 return null;
         }

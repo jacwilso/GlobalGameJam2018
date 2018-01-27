@@ -4,11 +4,4 @@ using UnityEngine;
 
 public class Person : Bystander {
 
-	protected new void Start () {
-		
-	}
-	
-	protected new void Update () {
-		
-	}
 }

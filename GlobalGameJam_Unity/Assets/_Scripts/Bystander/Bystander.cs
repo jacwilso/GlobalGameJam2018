@@ -15,11 +15,24 @@ public class Bystander : MonoBehaviour {
     }
 
     protected virtual void Update () {
-		
-	}
+        float dist = agent.remainingDistance;
+        if (agent.enabled &&
+            dist != Mathf.Infinity && 
+            agent.pathStatus == NavMeshPathStatus.PathComplete && 
+            agent.remainingDistance == 0)
+        {
+            agent.enabled = false;
+        }
+    }
 
     public void SetDestination(Vector3 point)
     {
+        Debug.Log(transform.position + " " + point);
+        if (agent == null)
+        {
+            agent = GetComponent<NavMeshAgent>();
+        }
+        agent.enabled = true;
         agent.SetDestination(point);
     }
 }
