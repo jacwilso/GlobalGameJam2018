@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Scenario_0
   m_EditorClassIdentifier: 
   bystanderTime: 1
-  tramTime: 4
+  tramTime: 1
   leftBystanders:
   - quantity: 7
     bystander: {fileID: 114038640404407200, guid: b2111a5edf17dd240acabbb38dae7bab,

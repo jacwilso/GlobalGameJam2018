@@ -438,16 +438,6 @@ Prefab:
       propertyPath: bystanderManager
       value: 
       objectReference: {fileID: 40177441}
-    - target: {fileID: 114403881592066508, guid: 29ba2f2fc268dfc418b1b63681a56c7a,
-        type: 2}
-      propertyPath: tramForce
-      value: 2000
-      objectReference: {fileID: 0}
-    - target: {fileID: 114403881592066508, guid: 29ba2f2fc268dfc418b1b63681a56c7a,
-        type: 2}
-      propertyPath: uppiness
-      value: 1000
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 29ba2f2fc268dfc418b1b63681a56c7a, type: 2}
   m_IsPrefabParent: 0
@@ -2820,14 +2810,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1741112285}
-  m_LocalRotation: {x: -0.29413712, y: 0.2284716, z: -0.07263405, w: -0.92520726}
+  m_LocalRotation: {x: -0.29612586, y: 0.20145616, z: -0.06404544, w: -0.9314629}
   m_LocalPosition: {x: 20.117025, y: 10.008683, z: -10.897481}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2070330514}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 35.272003, y: -24.408, z: 0}
 --- !u!82 &1741112290
 AudioSource:
   m_ObjectHideFlags: 0
