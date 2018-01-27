@@ -984,6 +984,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c097d99f19cc614a86596f42dfd8083, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skins: {fileID: 0}
+  skinLocation: {fileID: 0}
 --- !u!114 &114566026786934750
 MonoBehaviour:
   m_ObjectHideFlags: 1

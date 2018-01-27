@@ -24,7 +24,7 @@ public class Tram : MonoBehaviour {
             SelectPath();
         } else
         {
-            if (!offscreen && Mathf.Abs(transform.position.x - TramSpawner.instance.OffScreen.position.x) < TramSpawner.instance.PositionDelta)
+            if (!offscreen && Mathf.Abs(transform.position.x - TramSpawner.instance.OffScreen.position.x) < 2f * TramSpawner.instance.PositionDelta)
             {
                 OffScreen();
             }
@@ -51,6 +51,8 @@ public class Tram : MonoBehaviour {
     private void SelectPath()
     {
         pathSelected = true;
+        BezierSpline spline = TramSpawner.instance.Path;
+        spline.transform.position = transform.position;
         walker.spline = TramSpawner.instance.Path;
         walker.enabled = true;
         if (TramSpawner.instance.State == LeverState.Center)

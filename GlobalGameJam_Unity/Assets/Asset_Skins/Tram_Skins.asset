@@ -11,4 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26740182c709e5b4b8262f818c251a69, type: 3}
   m_Name: Tram_Skins
   m_EditorClassIdentifier: 
-  skins: []
+  skins:
+  - {fileID: 2100000, guid: c9bebed4f752a8d4e9eb638d67781691, type: 2}
+  - {fileID: 2100000, guid: 703c14f21edb8b540b3b4a0db63f7475, type: 2}
+  - {fileID: 2100000, guid: e67167cf5639d324b805009f3af27b65, type: 2}
+  - {fileID: 2100000, guid: c62da8f6a6534684296600e3b8ab74c3, type: 2}

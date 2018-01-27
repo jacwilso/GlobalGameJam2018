@@ -20,6 +20,6 @@ public class BystanderSpawn : MonoBehaviour {
     public Vector3 CircleVec2toVec3(float size)
     {
         Vector2 circle = Random.insideUnitCircle;
-        return new Vector3(circle.x, 0, circle.y) + new Vector3(size, 0, size);
+        return transform.position + size * (new Vector3(circle.x, 0, circle.y));
     }
 }

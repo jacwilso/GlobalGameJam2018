@@ -9,6 +9,11 @@ public class SkinObject : ScriptableObject {
     {
         get
         {
+            if (skins.Length == 0)
+            {
+                Debug.LogError("YOU HAVE NO SKINS YOU NINKUMPOOP!");
+                return null;
+            }
             if (index >= skins.Length)
             {
                 index = 0;
@@ -22,10 +27,10 @@ public class SkinObject : ScriptableObject {
                     }
                 }
             }
-            return skins[index];
+            return skins[index++];
         }
     }
 
     [SerializeField] Material[] skins;
-    private static int index;
+    private static int index = 0;
 }
