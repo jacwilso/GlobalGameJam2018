@@ -341,6 +341,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4798006769712744}
   - component: {fileID: 114093948565314668}
+  - component: {fileID: 114185548752604806}
   m_Layer: 0
   m_Name: Intersection
   m_TagString: Untagged
@@ -4010,7 +4011,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1545902621239392}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.53, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4798006769712744}
@@ -9165,6 +9166,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: 0.5
+--- !u!114 &114185548752604806
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1141438763701844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 692671a6abe511a42bd01c4c30959e0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  left: {fileID: 114666098644130588}
+  right: {fileID: 114010826562405008}
+  center: {fileID: 114604961468694452}
 --- !u!114 &114604961468694452
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -7,7 +7,7 @@ public class TramSpawner : MonoBehaviour {
 
     public Transform Intersection
     {
-        get { return intersection; }
+        get { return intersection.transform; }
     }
 
     public Transform Offscreen
@@ -21,13 +21,13 @@ public class TramSpawner : MonoBehaviour {
         {
             if (lever.State == LeverState.Left)
             {
-                return leftCurve;
+                return intersection.Left;
             } else if (lever.State == LeverState.Right)
             {
-                return rightCurve;
+                return intersection.Right;
             } else
             {
-                return centerCurve;
+                return intersection.Center;
             }
         }
     }
@@ -65,8 +65,8 @@ public class TramSpawner : MonoBehaviour {
 	[SerializeField] private Vector2 tramForce;
 	[SerializeField] private float positionDelta;
     [SerializeField] private GameObject tram;
-    [SerializeField] private Transform intersection, offscreen;
-    [SerializeField] private BezierSpline leftCurve, rightCurve, centerCurve;
+    [SerializeField] private Transform offscreen;
+    [SerializeField] private IntersectionSplineManager intersection;
     [SerializeField] private BystanderManager bystanderManager;
     [SerializeField] private ScenarioObject[] scenarios;
 
