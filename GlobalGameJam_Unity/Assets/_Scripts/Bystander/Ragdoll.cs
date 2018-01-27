@@ -13,6 +13,8 @@ public class Ragdoll : MonoBehaviour {
 
 	Rigidbody[] ragdollRigidbodies;
 
+	Animator animator;
+
 	// Use this for initialization
 	void Start () {
 		preRagdollCollider = GetComponent<Collider>();
@@ -22,6 +24,8 @@ public class Ragdoll : MonoBehaviour {
 		ragdollColliders = new Collider[colliders.Length - 1];
 		Rigidbody[] rigidbodies = GetComponentsInChildren<Rigidbody>();
 		ragdollRigidbodies = new Rigidbody[rigidbodies.Length - 1];
+
+		animator = GetComponent<Animator>();
 
 		int index = 0;
 		foreach (Collider c in colliders)
@@ -69,6 +73,8 @@ public class Ragdoll : MonoBehaviour {
 				rr.useGravity = true;
 				rr.isKinematic = false;
 			}
+
+			animator.enabled = false;
 		}
 	}
 }
