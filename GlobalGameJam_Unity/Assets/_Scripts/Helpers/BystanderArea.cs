@@ -11,7 +11,7 @@ public class BystanderArea : MonoBehaviour {
 
     public Vector3 SpawnPosition
     {
-        get { return transform.position + CirlceVec2toVec3(spawnRadius); }
+        get { return transform.position + CircleVec2toVec3(spawnRadius); }
     }
 
     [SerializeField] private Vector2 size = new Vector2(5, 1);
@@ -38,10 +38,10 @@ public class BystanderArea : MonoBehaviour {
         UnityEditor.Handles.DrawWireDisc(transform.position, Vector3.up, spawnRadius);
     }
 
-    private Vector3 CirlceVec2toVec3(float size)
+    private Vector3 CircleVec2toVec3(float size)
     {
         Vector2 circle = Random.insideUnitCircle;
-        return size * new Vector3(circle.x, 0, circle.y);
+        return new Vector3(circle.x, 0, circle.y) + new Vector3(size, 0, size);
     }
 
     private Vector3 RectangleVec2toVec3(Vector2 size)
