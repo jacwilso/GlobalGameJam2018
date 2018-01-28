@@ -64,6 +64,14 @@ public class BystanderArea : MonoBehaviour {
         UnityEditor.Handles.DrawSolidRectangleWithOutline(verts, trackAreaColor, trackAreaColor);
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<Bystander>() != null)
+        {
+            Destroy(other.gameObject);
+        }
+    }
+
     private Vector3 RectangleVec2toVec3(Vector2 size)
     {
         return new Vector3(Random.Range(0, size.x), 0, Random.Range(0, size.y));

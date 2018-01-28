@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3726d3cf0d8d5d4792bc753311889b0, type: 3}
+  m_Name: CarDrivingSounds
+  m_EditorClassIdentifier: 
+  soundClips:
+  - {fileID: 8300000, guid: 206fcdc303dc4ed4faadd5195ebd1d3b, type: 3}
+  - {fileID: 8300000, guid: 052061eb7505d4b418fe8fb12b1f2400, type: 3}
+  - {fileID: 8300000, guid: 618b9a6b47364fa40900feea682c7bcd, type: 3}
+  - {fileID: 8300000, guid: 1c739642b4894104e9d4086695b14875, type: 3}
+  currentIndex: 0

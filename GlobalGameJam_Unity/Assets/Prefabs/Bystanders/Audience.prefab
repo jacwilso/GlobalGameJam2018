@@ -1335,6 +1335,9 @@ MonoBehaviour:
   waitTime: 0
   skins: {fileID: 11400000, guid: 3c9e462206445aa47acba789ac6d5da3, type: 2}
   skinLocation: {fileID: 100002}
+  collisionSound: {fileID: 11400000, guid: ef749a111abb68f4bac0f988e39a4047, type: 2}
+  intermittentSound: {fileID: 0}
+  movementSound: {fileID: 0}
   pctRunning: 0
 --- !u!136 &136335040151829000
 CapsuleCollider:

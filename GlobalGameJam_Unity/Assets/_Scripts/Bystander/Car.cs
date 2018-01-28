@@ -5,6 +5,7 @@ using UnityEngine;
 public class Car : Bystander {
 
     private ParticleSystem ps;
+    private AudioSource movementAudio;
 
 	[SerializeField]
 	private Renderer[] extraSkinLocations;
@@ -22,12 +23,15 @@ public class Car : Bystander {
 				r.material = s;
 			}
 		}
+        movementAudio = GetComponent<AudioSource>();
+        movementAudio.clip = movementSound.GetClip();
 	}
 
     protected override void TramCollision()
     {
         base.TramCollision();
         ps.Play();
+        movementAudio.Stop();
 
 
 		Material s = Resources.Load<Material>("Wreckage");
