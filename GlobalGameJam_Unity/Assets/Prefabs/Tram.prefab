@@ -981,7 +981,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 180918}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 90e9e70c517224f58a65882d57775fa2, type: 3}
@@ -1024,7 +1024,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 2
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1068,7 +1068,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skins: {fileID: 11400000, guid: a000320a77d8fb24db0dfaf81c0c179a, type: 2}
   skinLocation: {fileID: 105942}
-  bloodNoiseSource: {fileID: 0}
 --- !u!114 &114906347638240218
 MonoBehaviour:
   m_ObjectHideFlags: 1
