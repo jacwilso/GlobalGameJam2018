@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23199941805934624}
   - component: {fileID: 65353451347140544}
   - component: {fileID: 54293093581162584}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 23134251894838246}
   - component: {fileID: 64240770093882264}
   - component: {fileID: 54983013200438906}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: front_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 23510513967687902}
   - component: {fileID: 64249585722864270}
   - component: {fileID: 54799229890694270}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: rear_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 23624086309717994}
   - component: {fileID: 64690878947129202}
   - component: {fileID: 54659075340489742}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: front_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 23581062303131338}
   - component: {fileID: 64309789452279290}
   - component: {fileID: 54631658399900446}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: rear_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1914969221196824}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.04, y: 0.0000019073486, z: 1.78}
+  m_LocalPosition: {x: 4.7334995, y: 0.0000014305115, z: 0.57353806}
   m_LocalScale: {x: 0.58670884, y: 0.5867088, z: 0.5867088}
   m_Children:
   - {fileID: 4187529069229948}
@@ -505,7 +505,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b7006fbc3b01578458ee2e60454aed3e, type: 2}
+  - {fileID: 2100000, guid: 09b86a4f13198de43b8144dabfd36a12, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
