@@ -59,36 +59,28 @@ public class Ragdoll : MonoBehaviour {
 		}
 	}
 
-    public void Dissolve()
+    public void Settled()
     {
-        StartCoroutine(DissolveCo());
+        StartCoroutine(SettleCo());
     }
 
-    private IEnumerator DissolveCo()
+    private IEnumerator SettleCo()
     {
         yield return new WaitForSeconds(Random.Range(8f, 15f));
-        for (int i = 0; i < ragdollColliders.Length; i++)
-        {
-            ragdollColliders[i].enabled = false;
-            yield return new WaitForSeconds(Random.Range(0.25f, 0.45f));
-        }
-        Destroy(gameObject, 1f);
+        EnableRagdoll(false);
     }
 
-	void OnCollisionEnter(Collision collision)
-	{
-		if (collision.gameObject.layer == LayerMask.NameToLayer("Environment"))
-		{
-			collision.gameObject.GetComponent<Rigidbody>().useGravity = true;
+    public void EnableRagdoll(bool isEnabled)
+    {
+        foreach (Collider rc in ragdollColliders)
+        {
+            rc.enabled = isEnabled;
+        }
 
-			OtherDissolveCo(collision.gameObject);
-		}
-	}
-
-	private IEnumerator OtherDissolveCo(GameObject go)
-	{
-		yield return new WaitForSeconds(Random.Range(6f, 12f));
-		go.GetComponent<Collider>().enabled = false;
-		Destroy(go, 1f);
-	}
+        foreach (Rigidbody rr in ragdollRigidbodies)
+        {
+            rr.isKinematic = !isEnabled;
+            rr.useGravity = isEnabled;
+        }
+    }
 }

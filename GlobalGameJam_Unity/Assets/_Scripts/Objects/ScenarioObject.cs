@@ -9,6 +9,14 @@ public class ScenarioObject : ScriptableObject {
     [Tooltip("The time between when the bystanders arrive and when the next tram comes.")]
     public float tramTime;
     public BystanderMap[] leftBystanders, rightBystanders;
+    public bool startParade;
+
+    private Parade parade;
+
+    private void OnEnable()
+    {
+        parade = FindObjectOfType<Parade>();
+    }
 
     public void Spawn(LeverState state, BystanderManager parent)
     {
@@ -17,6 +25,10 @@ public class ScenarioObject : ScriptableObject {
         for (int i = 0; i < bystanders.Length; i++)
         {
             SpawnBystanders(bystanders[i], area);
+        }
+        if (startParade)
+        {
+            parade.StartParade();
         }
     }
 

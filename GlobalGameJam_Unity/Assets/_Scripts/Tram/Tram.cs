@@ -83,19 +83,7 @@ public class Tram : MonoBehaviour {
 			ragdoll.preRagdollRigidbody.velocity = Vector3.zero;
 			ragdoll.preRagdollRigidbody.angularVelocity = Vector3.zero;
 
-			// Enable every collider in the bystander ragdoll
-			foreach (Collider rc in ragdoll.ragdollColliders)
-			{
-				rc.enabled = true;
-			}
-
-			// Set every rigidbody in the bystander ragdoll to the appropriate values and apply a force
-			foreach (Rigidbody rr in ragdoll.ragdollRigidbodies)
-			{
-				rr.isKinematic = false;
-				rr.useGravity = true;
-				rr.AddForce(Random.Range(TramSpawner.instance.TramForce.x, TramSpawner.instance.TramForce.y) * direction, ForceMode.Impulse);
-			}
+            ragdoll.EnableRagdoll(true);
         }
     }
 

@@ -2383,7 +2383,9 @@ MonoBehaviour:
   waitTime: 0
   skins: {fileID: 11400000, guid: 735fc0a3a79a1a94483b65335c2f134e, type: 2}
   skinLocation: {fileID: 1780980887505810}
-  soundGroup: {fileID: 11400000, guid: ef749a111abb68f4bac0f988e39a4047, type: 2}
+  collisionSound: {fileID: 11400000, guid: ef749a111abb68f4bac0f988e39a4047, type: 2}
+  intermittentSound: {fileID: 0}
+  movementSound: {fileID: 0}
   pctRunning: 0
 --- !u!114 &114607810286344792
 MonoBehaviour:
