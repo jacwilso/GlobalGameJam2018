@@ -17,7 +17,13 @@ MonoBehaviour:
   - quantity: 14
     bystander: {fileID: 114038640404407200, guid: b2111a5edf17dd240acabbb38dae7bab,
       type: 2}
+  - quantity: 1
+    bystander: {fileID: 114247991017707320, guid: 46160fe5855d2ac4bb7177bac75d6b02,
+      type: 2}
   rightBystanders:
   - quantity: 14
     bystander: {fileID: 114038640404407200, guid: b2111a5edf17dd240acabbb38dae7bab,
+      type: 2}
+  - quantity: 1
+    bystander: {fileID: 114247991017707320, guid: 46160fe5855d2ac4bb7177bac75d6b02,
       type: 2}

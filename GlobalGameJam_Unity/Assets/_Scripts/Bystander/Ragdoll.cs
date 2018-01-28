@@ -20,10 +20,16 @@ public class Ragdoll : MonoBehaviour {
 	[HideInInspector]
 	public Animator animator;
 
+	public AudioSource bloodNoiseSource;
+
+
 	// Use this for initialization
 	void Start () {
 		preRagdollCollider = GetComponent<Collider>();
 		preRagdollRigidbody = GetComponent<Rigidbody>();
+
+		bloodNoiseSource = GetComponent<AudioSource> ();
+
 
 		Collider[] colliders = GetComponentsInChildren<Collider>();
 		ragdollColliders = new Collider[colliders.Length - 1];
@@ -64,6 +70,8 @@ public class Ragdoll : MonoBehaviour {
 	{
 		if (collision.collider.GetComponent<Tram>())
 		{
+
+			bloodNoiseSource.Play ();
 			// This gets called in the Tram.cs OnCollisionEnter function now to avoid ordering issue
 			/*preRagdollCollider.enabled = false;
 			preRagdollRigidbody.useGravity = false;
@@ -81,6 +89,11 @@ public class Ragdoll : MonoBehaviour {
 			}
 
 			animator.enabled = false;*/
+
+
+
+
+
 		}
 	}
 }
