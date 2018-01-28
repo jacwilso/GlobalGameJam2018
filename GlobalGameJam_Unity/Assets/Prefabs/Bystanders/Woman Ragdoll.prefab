@@ -2319,8 +2319,10 @@ MonoBehaviour:
   skins: {fileID: 11400000, guid: 6b1866820b991eb4fa4bc62825eeb8d9, type: 2}
   skinLocation: {fileID: 1305343434758168}
   collisionSound: {fileID: 11400000, guid: ef749a111abb68f4bac0f988e39a4047, type: 2}
-  intermittentSound: {fileID: 0}
+  intermittentSound: {fileID: 11400000, guid: b6b5ac31724136b408f197d935b100f4, type: 2}
   movementSound: {fileID: 0}
+  paradeSpeed: 0.2
+  speakTime: 2
   pctRunning: 0
 --- !u!135 &135453285969298438
 SphereCollider:

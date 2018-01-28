@@ -36,9 +36,13 @@ public class Parade : MonoBehaviour {
 
     public void StartParade ()
     {
-        int areaIndex = Random.Range(0, 1);
+        int areaIndex = Random.Range(0, 2);
         for (int i = 0; i < parade.Length; i++)
         {
+            if (parade[i].bystander == null)
+            {
+                continue;
+            }
             Bystander b = Instantiate<Bystander>(parade[i].bystander, areas[areaIndex].SpawnArea, Quaternion.identity, areas[areaIndex].transform);
             b.SetPath(areas[areaIndex].DestinationArea);
         }

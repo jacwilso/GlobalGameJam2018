@@ -15,7 +15,7 @@ public class Person : Bystander {
     private Animator anim;
     private ParticleSystem bloodExplosion;
 
-    protected new void Start()
+    protected override void Start()
     {
         base.Start();
         if (anim == null)

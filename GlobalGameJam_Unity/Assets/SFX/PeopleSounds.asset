@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3726d3cf0d8d5d4792bc753311889b0, type: 3}
+  m_Name: PeopleSounds
+  m_EditorClassIdentifier: 
+  soundClips:
+  - {fileID: 8300000, guid: bde3d146d3a63e547a93b684ed721c9d, type: 3}
+  - {fileID: 8300000, guid: 8f31ee49c7210db48863d5627f0910a2, type: 3}
+  - {fileID: 8300000, guid: 37e9a0a2d2985394ba5ed7ed49114209, type: 3}
+  - {fileID: 8300000, guid: f6dca4faf5e09344f9edff3525a6afbd, type: 3}
+  - {fileID: 8300000, guid: 69b3b0ac7947c32469770ccdd1bc8a62, type: 3}
+  - {fileID: 8300000, guid: e0f0113f2185a474cbdbda9e71558408, type: 3}
+  - {fileID: 8300000, guid: f889c08db2788764b8511e13694fc034, type: 3}
+  - {fileID: 8300000, guid: 78b4c010e19b4e341b88d4c62038ec0b, type: 3}
+  - {fileID: 8300000, guid: 0d266a302b0c6b9469ec4928227d672f, type: 3}
+  currentIndex: 0

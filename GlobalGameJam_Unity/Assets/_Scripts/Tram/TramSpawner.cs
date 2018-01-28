@@ -136,6 +136,10 @@ public class TramSpawner : MonoBehaviour {
 
     private IEnumerator WaitSpawn()
     {
+        if (scenarioIndex % 2 == 1)
+        {
+            Howard.instance.PlayLine();
+        }
         yield return new WaitForSeconds(scenarios[scenarioIndex].tramTime);
         Spawn();
         scenarioIndex++;
