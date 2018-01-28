@@ -14,15 +14,17 @@ public class EndUI : MonoBehaviour {
 
     private void EnableChildren()
     {
-        EnableChildren(true);
+        if (gameObject.activeSelf)
+        {
+            EnableChildren(true);
+        }
     }
 
     private void EnableChildren(bool enabled)
     {
-        for (int i = 0; i < children.Length; i++)
+        for (int i = 1; i < children.Length; i++)
         {
             children[i].gameObject.SetActive(enabled);
         }
-        gameObject.SetActive(true);
     }
 }
