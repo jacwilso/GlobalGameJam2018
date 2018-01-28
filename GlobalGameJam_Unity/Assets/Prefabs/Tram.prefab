@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 466778}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tramBtm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 414300}
   - component: {fileID: 3307500}
   - component: {fileID: 2356084}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TramBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 439068}
   - component: {fileID: 3375468}
   - component: {fileID: 2362982}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TramLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 418824}
   - component: {fileID: 3309668}
   - component: {fileID: 2392480}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TramPantograph
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 427028}
   - component: {fileID: 3363340}
   - component: {fileID: 2364856}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TramStoboard_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 417642}
   - component: {fileID: 3398444}
   - component: {fileID: 2349550}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tramBtm_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 499536}
   - component: {fileID: 3315228}
   - component: {fileID: 2390116}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tram_wheel_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 419170}
   - component: {fileID: 3379260}
   - component: {fileID: 2374090}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TramStoboard_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 498258}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tram_wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 444686}
   - component: {fileID: 3362918}
   - component: {fileID: 2328606}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TramadBanner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 460602}
   - component: {fileID: 3379810}
   - component: {fileID: 2349966}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tramBtm_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 446378}
   - component: {fileID: 3355036}
   - component: {fileID: 2347988}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tram_wheel_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 54174213503893128}
   - component: {fileID: 114906347638240218}
   - component: {fileID: 114485595166947346}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tram
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 467102}
   - component: {fileID: 3354684}
   - component: {fileID: 2336608}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tramlampshade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 180918}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.924895, y: -0.00000036184443, z: -3.0353713}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.7478012, y: 1.7478013, z: 1.7478013}
   m_Children:
   - {fileID: 418824}
@@ -924,7 +924,7 @@ GameObject:
   - component: {fileID: 4261208615861866}
   - component: {fileID: 198436872670484104}
   - component: {fileID: 199210184275898394}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -941,7 +941,7 @@ GameObject:
   - component: {fileID: 4575109251872104}
   - component: {fileID: 198506478096605176}
   - component: {fileID: 199113913180837550}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Debris
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -958,7 +958,7 @@ GameObject:
   - component: {fileID: 4169990947576710}
   - component: {fileID: 198744492045885164}
   - component: {fileID: 199172295704547054}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShockWave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -975,7 +975,7 @@ GameObject:
   - component: {fileID: 4493178565376780}
   - component: {fileID: 198053408158091096}
   - component: {fileID: 199571789432959348}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -992,7 +992,7 @@ GameObject:
   - component: {fileID: 4616076123140026}
   - component: {fileID: 198909688347105574}
   - component: {fileID: 199291237573166822}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BigExplosionEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1009,7 +1009,7 @@ GameObject:
   - component: {fileID: 4241803181255258}
   - component: {fileID: 198150211427576418}
   - component: {fileID: 199961892921898524}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DerisFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1026,7 +1026,7 @@ GameObject:
   - component: {fileID: 4414722255066344}
   - component: {fileID: 198051694575588112}
   - component: {fileID: 199936726958273290}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Embers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1043,7 +1043,7 @@ GameObject:
   - component: {fileID: 4591737928589638}
   - component: {fileID: 198575766155198118}
   - component: {fileID: 199641574979720570}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DebrisSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1150,7 +1150,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1471391096087738}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -14.81, y: 13.54, z: 9.64}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4493178565376780}
@@ -1275,7 +1275,7 @@ ParticleSystem:
   stopAction: 0
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 0
   useRigidbodyForVelocity: 1
@@ -4597,7 +4597,7 @@ ParticleSystem:
   stopAction: 0
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -8003,7 +8003,7 @@ ParticleSystem:
   stopAction: 0
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 0
   useRigidbodyForVelocity: 1
@@ -11292,7 +11292,7 @@ ParticleSystem:
   stopAction: 0
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -14608,7 +14608,7 @@ ParticleSystem:
   stopAction: 0
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 0
   useRigidbodyForVelocity: 1
@@ -17898,7 +17898,7 @@ ParticleSystem:
   stopAction: 0
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 0
   useRigidbodyForVelocity: 1
@@ -21199,7 +21199,7 @@ ParticleSystem:
   stopAction: 0
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 0
   useRigidbodyForVelocity: 1
@@ -24726,9 +24726,9 @@ ParticleSystem:
   lengthInSec: 4
   simulationSpeed: 1
   stopAction: 0
-  looping: 1
+  looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
