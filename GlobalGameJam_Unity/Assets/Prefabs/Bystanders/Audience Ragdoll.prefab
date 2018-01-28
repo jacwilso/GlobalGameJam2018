@@ -389,9 +389,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4885727805093640}
-  - component: {fileID: 135319927717383796}
   - component: {fileID: 54882972168510594}
   - component: {fileID: 144202097127066482}
+  - component: {fileID: 135677018570077660}
   m_Layer: 0
   m_Name: Bip008 Head
   m_TagString: Untagged
