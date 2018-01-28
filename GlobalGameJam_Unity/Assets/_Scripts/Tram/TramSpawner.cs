@@ -126,7 +126,7 @@ public class TramSpawner : MonoBehaviour {
         lever = FindObjectOfType<LeverController>();
 	}
 
-    private void OnDeactivate()
+    private void OnDisable()
     {
         if (tramCenter != null)
         {
@@ -162,7 +162,7 @@ public class TramSpawner : MonoBehaviour {
         if (scenarioIndex >= scenarios.Length)
         {
             this.enabled = false;
-            Spawn();
+            FindObjectOfType<Parade>().enabled = false;
             return;
         }
         StartCoroutine(WaitBystander());

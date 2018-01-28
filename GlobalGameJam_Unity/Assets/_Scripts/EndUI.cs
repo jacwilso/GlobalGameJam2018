@@ -23,5 +23,6 @@ public class EndUI : MonoBehaviour {
         {
             children[i].gameObject.SetActive(enabled);
         }
+        gameObject.SetActive(true);
     }
 }

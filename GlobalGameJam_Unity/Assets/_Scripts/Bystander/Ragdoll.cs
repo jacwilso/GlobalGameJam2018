@@ -122,7 +122,8 @@ public class Ragdoll : MonoBehaviour
 
     public void Dissolve()
     {
-        StartCoroutine(DissolveCo());
+        //StartCoroutine(DissolveCo());
+        StartCoroutine(SettleCo());
     }
 
     private IEnumerator DissolveCo()
@@ -134,5 +135,11 @@ public class Ragdoll : MonoBehaviour
             yield return new WaitForSeconds(Random.Range(0.25f, 0.45f));
         }
         Destroy(gameObject, 1f);
+    }
+
+    private IEnumerator SettleCo()
+    {
+        yield return new WaitForSeconds(Random.Range(8f, 15f));
+        EnableRagdoll(false, Vector3.zero);
     }
 }
