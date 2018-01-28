@@ -4,4 +4,18 @@ using UnityEngine;
 
 public class Car : Bystander {
 
+    private ParticleSystem ps;
+
+    protected override void Start()
+    {
+        base.Start();
+        ps = GetComponent<ParticleSystem>();
+    }
+
+    protected override void TramCollision()
+    {
+        base.TramCollision();
+        ps.Play();
+    }
+
 }

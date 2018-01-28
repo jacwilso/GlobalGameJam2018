@@ -20,20 +20,9 @@ public class Ragdoll : MonoBehaviour {
 	[HideInInspector]
 	public Animator animator;
 
-	public AudioSource bloodNoiseSource;
-
-	public ParticleSystem BloodExplosion;
-
-
-	// Use this for initialization
 	void Start () {
 		preRagdollCollider = GetComponent<Collider>();
 		preRagdollRigidbody = GetComponent<Rigidbody>();
-
-		bloodNoiseSource = GetComponent<AudioSource> ();
-
-		BloodExplosion = GetComponentInChildren<ParticleSystem> ();
-
 
 		Collider[] colliders = GetComponentsInChildren<Collider>();
 		ragdollColliders = new Collider[colliders.Length - 1];
@@ -67,44 +56,6 @@ public class Ragdoll : MonoBehaviour {
 			r.useGravity = false;
 			r.isKinematic = true;
 			index++;
-		}
-	}
-
-	void OnCollisionEnter(Collision collision)
-	{
-		if (collision.collider.GetComponent<Tram>())
-		{
-
-			bloodNoiseSource.Play ();
-
-			ParticleSystem.MainModule main = BloodExplosion.main;
-			//main.startSpeed = collision.collider.GetComponent<Rigidbody> ().velocity;
-
-			BloodExplosion.Play ();
-
-
-			// This gets called in the Tram.cs OnCollisionEnter function now to avoid ordering issue
-			/*preRagdollCollider.enabled = false;
-			preRagdollRigidbody.useGravity = false;
-			preRagdollRigidbody.isKinematic = true;
-
-			foreach (Collider rc in ragdollColliders)
-			{
-				rc.enabled = true;
-			}
-
-			foreach (Rigidbody rr in ragdollRigidbodies)
-			{
-				rr.useGravity = true;
-				rr.isKinematic = false;
-			}
-
-			animator.enabled = false;*/
-
-
-
-
-
 		}
 	}
 }
