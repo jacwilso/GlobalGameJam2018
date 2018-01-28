@@ -17,26 +17,26 @@ MonoBehaviour:
   - quantity: 5
     bystander: {fileID: 114561821792654534, guid: 6dd9f6a392679b94c8003f2bc6ec6a59,
       type: 2}
-  - quantity: 5
+  - quantity: 15
     bystander: {fileID: 114393119109142106, guid: 8b5c8a780295791489858910c0b38040,
       type: 2}
-  - quantity: 5
+  - quantity: 15
     bystander: {fileID: 114247991017707320, guid: 46160fe5855d2ac4bb7177bac75d6b02,
       type: 2}
-  - quantity: 5
+  - quantity: 15
     bystander: {fileID: 114038640404407200, guid: b2111a5edf17dd240acabbb38dae7bab,
       type: 2}
   rightBystanders:
   - quantity: 5
     bystander: {fileID: 114561821792654534, guid: 6dd9f6a392679b94c8003f2bc6ec6a59,
       type: 2}
-  - quantity: 5
+  - quantity: 15
     bystander: {fileID: 114393119109142106, guid: 8b5c8a780295791489858910c0b38040,
       type: 2}
-  - quantity: 5
+  - quantity: 15
     bystander: {fileID: 114247991017707320, guid: 46160fe5855d2ac4bb7177bac75d6b02,
       type: 2}
-  - quantity: 5
+  - quantity: 15
     bystander: {fileID: 114038640404407200, guid: b2111a5edf17dd240acabbb38dae7bab,
       type: 2}
   startParade: 0
