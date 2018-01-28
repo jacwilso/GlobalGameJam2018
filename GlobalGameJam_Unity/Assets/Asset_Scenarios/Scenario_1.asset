@@ -15,9 +15,15 @@ MonoBehaviour:
   tramTime: 6
   leftBystanders:
   - quantity: 7
-    bystander: {fileID: 114124901179705572, guid: db0087f8d00a88c4fb43e1c9bfa5f3e5,
+    bystander: {fileID: 114038640404407200, guid: b2111a5edf17dd240acabbb38dae7bab,
+      type: 2}
+  - quantity: 1
+    bystander: {fileID: 114393119109142106, guid: 8b5c8a780295791489858910c0b38040,
       type: 2}
   rightBystanders:
   - quantity: 7
-    bystander: {fileID: 114124901179705572, guid: db0087f8d00a88c4fb43e1c9bfa5f3e5,
+    bystander: {fileID: 114038640404407200, guid: b2111a5edf17dd240acabbb38dae7bab,
+      type: 2}
+  - quantity: 1
+    bystander: {fileID: 114393119109142106, guid: 8b5c8a780295791489858910c0b38040,
       type: 2}
