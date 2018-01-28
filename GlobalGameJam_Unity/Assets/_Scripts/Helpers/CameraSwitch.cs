@@ -13,6 +13,10 @@ public class CameraSwitch : MonoBehaviour {
 	bool onSecondaryCamera = false;
 	bool _onSecondaryCamera = false;
 
+	[Space]
+
+	public GameObject unloadedObjects;
+
 	void Start ()
 	{
 		sml = GetComponent<SmoothMouseLook>();
@@ -34,6 +38,11 @@ public class CameraSwitch : MonoBehaviour {
 
 			sml.enabled = onSecondaryCamera;
 			sml.Cutoff();
+
+			if (unloadedObjects)
+			{
+				unloadedObjects.SetActive(onSecondaryCamera);
+			}
 		}
 	}
 }

@@ -1256,7 +1256,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1144341235132780}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 317.7473, y: 209.09204, z: -250.95526}
+  m_LocalPosition: {x: 19.641043, y: 0.0000019073486, z: 3.6711683}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4033842588760260}
@@ -1513,7 +1513,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 25a605f6ab7c8c143bd68f767cf2b256, type: 2}
+  - {fileID: 2100000, guid: 74ac6e81e628e664d90df1edfd30fab1, type: 2}
   - {fileID: 2100000, guid: 10fc3992c784e794abf0ff1f660f9eaa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -1582,7 +1582,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 25a605f6ab7c8c143bd68f767cf2b256, type: 2}
+  - {fileID: 2100000, guid: 9324c01e4292a7940a7e93f679247ae9, type: 2}
   - {fileID: 2100000, guid: 10fc3992c784e794abf0ff1f660f9eaa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -1617,7 +1617,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 25a605f6ab7c8c143bd68f767cf2b256, type: 2}
+  - {fileID: 2100000, guid: ad79d1a226483e74587a30b5e6bb220a, type: 2}
   - {fileID: 2100000, guid: 10fc3992c784e794abf0ff1f660f9eaa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -1652,7 +1652,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 0ac362293b7390e4c98c1156c29e8e1c, type: 2}
+  - {fileID: 2100000, guid: 4daecb48c1bc27d4eb2b4b32fd536067, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1822,7 +1822,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 25a605f6ab7c8c143bd68f767cf2b256, type: 2}
+  - {fileID: 2100000, guid: df552e0d88f36604395f6905f86aacc6, type: 2}
   - {fileID: 2100000, guid: 10fc3992c784e794abf0ff1f660f9eaa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -1891,7 +1891,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 25a605f6ab7c8c143bd68f767cf2b256, type: 2}
+  - {fileID: 2100000, guid: 805af35c59d07b74c83c2feea24dbbdd, type: 2}
   - {fileID: 2100000, guid: 10fc3992c784e794abf0ff1f660f9eaa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -1960,7 +1960,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 0ac362293b7390e4c98c1156c29e8e1c, type: 2}
+  - {fileID: 2100000, guid: 9fc50d5a4a01e77498e8e7b23df3469a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1994,7 +1994,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 25a605f6ab7c8c143bd68f767cf2b256, type: 2}
+  - {fileID: 2100000, guid: 1e94dd0f117ff9842b4fbab06c200d48, type: 2}
   - {fileID: 2100000, guid: 10fc3992c784e794abf0ff1f660f9eaa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -2132,7 +2132,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 25a605f6ab7c8c143bd68f767cf2b256, type: 2}
+  - {fileID: 2100000, guid: 2f4eb7fe424d3c44c9c8d31c295ecf8d, type: 2}
   - {fileID: 2100000, guid: 10fc3992c784e794abf0ff1f660f9eaa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -2167,7 +2167,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 25a605f6ab7c8c143bd68f767cf2b256, type: 2}
+  - {fileID: 2100000, guid: c23cebf0fee19d1479c75d2f31ad5c64, type: 2}
   - {fileID: 2100000, guid: 10fc3992c784e794abf0ff1f660f9eaa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -3167,9 +3167,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitTime: 0
-  skins: {fileID: 0}
+  skins: {fileID: 11400000, guid: 82abe5d2e5f17e7419f09619c9c783bd, type: 2}
   skinLocation: {fileID: 0}
   soundGroup: {fileID: 11400000, guid: 5761e62960aa42f4eb90219547eda84a, type: 2}
+  extraSkinLocations:
+  - {fileID: 23654173413639872}
+  - {fileID: 23413376444877526}
+  - {fileID: 23927772054841862}
+  - {fileID: 23523920350385144}
+  - {fileID: 23167687468830332}
+  - {fileID: 23880705414082596}
+  - {fileID: 23088271845736750}
+  - {fileID: 23064562256128904}
+  - {fileID: 23366447478912832}
 --- !u!114 &114635932388353040
 MonoBehaviour:
   m_ObjectHideFlags: 1
