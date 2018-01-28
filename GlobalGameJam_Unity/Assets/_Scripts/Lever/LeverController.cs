@@ -17,10 +17,12 @@ public class LeverController : MonoBehaviour {
     private float rotationAngle = 15f;
     private LeverState state = LeverState.Right;
     private Coroutine leverCo;
+    private AudioSource audioSrc;
 
 	private void Start () {
         rotationAngle = 360f - Mathf.Abs(transform.eulerAngles.x);
         leverCo = null;
+        audioSrc = GetComponent<AudioSource>();
 
         if (centerTime > leverTime)
         {
@@ -38,6 +40,7 @@ public class LeverController : MonoBehaviour {
 
     private void Switch()
     {
+        audioSrc.PlayOneShot(audioSrc.clip);
         leverCo = StartCoroutine(SwitchLever());
     }
 
