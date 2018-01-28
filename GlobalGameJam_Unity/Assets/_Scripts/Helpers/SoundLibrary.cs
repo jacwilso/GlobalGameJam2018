@@ -14,6 +14,10 @@ public class SoundLibrary : MonoBehaviour
 	AudioClip[] _clips;
 
 	[SerializeField]
+	AudioClip[] _randomizedClips;
+	int _fyIndex = 0;
+
+	[SerializeField]
 	Transform[] _transforms;
 
 	[SerializeField]
@@ -79,6 +83,63 @@ public class SoundLibrary : MonoBehaviour
 		source.transform.parent = (relativePosition) ? t : null;
 		source.transform.position = (relativePosition) ? t.position + offset : offset;
 		source.clip = clip;
+		source.volume = (volume >= 0) ? volume : _defaultVolume;
+		source.loop = false;
+		source.spatialize = _spatialize;
+		source.spatialBlend = (_spatialize) ? 1f : 0f;
+
+		_numPlays[index]++;
+		source.Play();
+
+		return index;
+	}
+
+	public int PlayRandom(float volume = -1f, int transformIndex = -1, Vector3 offset = new Vector3(), bool relativePosition = true)
+	{
+		AudioSource source = null;
+		int index = -1;
+		for (int i = 0; i < _numSources; i++)
+		{
+			if (!_sources[i].isPlaying)
+			{
+				source = _sources[i];
+				index = i;
+				break;
+			}
+		}
+
+		if (source == null)
+		{
+			Debug.Log("[SoundLibrary] No available Audio_sources on " + name + " to play a random sound.");
+			return -1;
+		}
+
+		if (_randomizedClips.Length == 0)
+		{
+			Debug.Log("[SoundLibrary] No randomized clips to play.");
+			return -1;
+		}
+
+		if (_fyIndex >= _randomizedClips.Length)
+		{
+			_fyIndex = 0;
+			AudioClip temp;
+			int rand;
+
+			for (int i = 0; i < _randomizedClips.Length; i++)
+			{
+				temp = _randomizedClips[i];
+				rand = Random.Range(i, _randomizedClips.Length - 1);
+				_randomizedClips[i] = _randomizedClips[rand];
+				_randomizedClips[rand] = temp;
+				
+			}
+		}
+
+		Transform t = (transformIndex >= 0 && transformIndex < _transforms.Length) ? _transforms[transformIndex] : transform;
+		source.transform.parent = (relativePosition) ? t : null;
+		source.transform.position = (relativePosition) ? t.position + offset : offset;
+		source.clip = _randomizedClips[_fyIndex++];
 		source.volume = (volume >= 0) ? volume : _defaultVolume;
 		source.loop = false;
 		source.spatialize = _spatialize;
