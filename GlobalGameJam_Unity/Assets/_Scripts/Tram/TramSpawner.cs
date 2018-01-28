@@ -105,7 +105,6 @@ public class TramSpawner : MonoBehaviour {
 
     private void Start () {
         lever = FindObjectOfType<LeverController>();
-        Spawn();
 	}
 
     private void OnDeactivate()
@@ -114,11 +113,6 @@ public class TramSpawner : MonoBehaviour {
         {
             tramCenter();
         }
-    }
-
-    private void Spawn()
-    {
-        Instantiate(tram, transform.position, transform.rotation, transform);
     }
 
     private IEnumerator WaitSpawn()
@@ -137,6 +131,11 @@ public class TramSpawner : MonoBehaviour {
         yield return new WaitForSeconds(scenarios[scenarioIndex].bystanderTime);
         scenarios[scenarioIndex].Spawn(lastState, bystanderManager);
         StartCoroutine(WaitSpawn());
+    }
+
+    public void Spawn()
+    {
+        Instantiate(tram, transform.position, transform.rotation, transform);
     }
 
     public void BringInBystanders()

@@ -58,4 +58,20 @@ public class Ragdoll : MonoBehaviour {
 			index++;
 		}
 	}
+
+    public void Dissolve()
+    {
+        StartCoroutine(DissolveCo());
+    }
+
+    private IEnumerator DissolveCo()
+    {
+        yield return new WaitForSeconds(Random.Range(8f, 15f));
+        for (int i = 0; i < ragdollColliders.Length; i++)
+        {
+            ragdollColliders[i].enabled = false;
+            yield return new WaitForSeconds(Random.Range(0.25f, 0.45f));
+        }
+        Destroy(gameObject, 1f);
+    }
 }

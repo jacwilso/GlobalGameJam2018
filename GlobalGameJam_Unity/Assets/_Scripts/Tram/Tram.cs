@@ -51,7 +51,7 @@ public class Tram : MonoBehaviour {
 
 			if (ragdoll.animator) ragdoll.animator.enabled = false;
 
-			if (collision.gameObject.GetComponent<Ragcar>())
+			if (collision.gameObject.GetComponent<Car>())
 			{
 				foreach (Collider rc in ragdoll.ragdollColliders)
 				{

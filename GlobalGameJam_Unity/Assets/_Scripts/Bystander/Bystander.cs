@@ -56,6 +56,7 @@ public class Bystander : MonoBehaviour {
             tramCollision();
         }
         SoundLibrary.instance.PlayRandom(soundGroup);
+        GetComponent<Ragdoll>().Dissolve();
     }
 
     public virtual void SetDestination(Vector3 point)
