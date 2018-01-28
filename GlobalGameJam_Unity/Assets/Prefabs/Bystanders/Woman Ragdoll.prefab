@@ -1096,7 +1096,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1397352484944520}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.53, y: -0.0000009601026, z: 0.28}
+  m_LocalPosition: {x: 24.975748, y: -0.000001918658, z: -16.094872}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4528902429446278}
@@ -2318,7 +2318,7 @@ MonoBehaviour:
   waitTime: 0
   skins: {fileID: 11400000, guid: 6b1866820b991eb4fa4bc62825eeb8d9, type: 2}
   skinLocation: {fileID: 1305343434758168}
-  soundGroup: {fileID: 0}
+  soundGroup: {fileID: 11400000, guid: ef749a111abb68f4bac0f988e39a4047, type: 2}
   pctRunning: 0
 --- !u!135 &135453285969298438
 SphereCollider:

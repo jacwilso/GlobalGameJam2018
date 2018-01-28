@@ -142,7 +142,6 @@ GameObject:
   - component: {fileID: 114889988805905848}
   - component: {fileID: 195449595521252626}
   - component: {fileID: 114038640404407200}
-  - component: {fileID: 114923268042260830}
   m_Layer: 0
   m_Name: Audience Ragdoll
   m_TagString: Untagged
@@ -1524,7 +1523,7 @@ MonoBehaviour:
   waitTime: 0
   skins: {fileID: 11400000, guid: fb151266faf899e48a6c4a9a63bddfbb, type: 2}
   skinLocation: {fileID: 1259191722078902}
-  soundGroup: {fileID: 0}
+  soundGroup: {fileID: 11400000, guid: ef749a111abb68f4bac0f988e39a4047, type: 2}
   pctRunning: 0
 --- !u!114 &114889988805905848
 MonoBehaviour:
@@ -1542,22 +1541,6 @@ MonoBehaviour:
   preRagdollRigidbody: {fileID: 0}
   ragdollRigidbodies: []
   animator: {fileID: 0}
---- !u!114 &114923268042260830
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1314462547885030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2fb33cc4cd2cb04ba9bbe95f9c84ba2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spatialize: 0
-  _defaultVolume: 1
-  _clips: []
-  _transforms: []
-  _numSources: 3
 --- !u!135 &135677018570077660
 SphereCollider:
   m_ObjectHideFlags: 1

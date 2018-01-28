@@ -1187,7 +1187,7 @@ MonoBehaviour:
   waitTime: 0
   skins: {fileID: 0}
   skinLocation: {fileID: 0}
-  soundGroup: {fileID: 0}
+  soundGroup: {fileID: 11400000, guid: ef749a111abb68f4bac0f988e39a4047, type: 2}
   pctRunning: 0
 --- !u!135 &135180269080263026
 SphereCollider:

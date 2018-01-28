@@ -19,11 +19,11 @@ public class SkinObject : ScriptableObject {
                 index = 0;
                 for (int i = 0; i < skins.Length - 1; i++)
                 {
-                    for (int j = i + 1; j < skins.Length; j++)
+                    for (int j = i; j < skins.Length; j++)
                     {
                         Material tmp = skins[i];
                         skins[i] = skins[j];
-                        skins[j] = skins[i];
+                        skins[j] = tmp;
                     }
                 }
             }
