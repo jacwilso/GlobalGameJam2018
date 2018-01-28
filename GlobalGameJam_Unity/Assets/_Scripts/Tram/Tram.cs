@@ -12,12 +12,17 @@ public class Tram : MonoBehaviour {
     private SplineWalker walker;
     private Renderer rend;
 
+
+	public AudioSource bloodNoiseSource;
+
+
     private void Start()
     {
         walker = GetComponent<SplineWalker>();
         walker.enabled = false;
         skinLocation.GetComponent<Renderer>().material = skins.Skin;
         rend = GetComponent<Renderer>();
+		bloodNoiseSource = GetComponent<AudioSource> ();
     }
 
     private void Update () {
@@ -47,6 +52,8 @@ public class Tram : MonoBehaviour {
 			direction.y = Mathf.Abs(direction.y);
 			direction += TramSpawner.instance.Uppiness * Vector3.up;
 
+			bloodNoiseSource.Play ();
+
 			Ragdoll ragdoll = collision.gameObject.GetComponent<Ragdoll>();
 
 			ragdoll.animator.enabled = false;
@@ -71,6 +78,8 @@ public class Tram : MonoBehaviour {
 			}
         }
     }
+
+
 
     private void Offscreen()
     {

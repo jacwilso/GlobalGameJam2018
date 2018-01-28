@@ -215,6 +215,7 @@ GameObject:
   - component: {fileID: 54174213503893128}
   - component: {fileID: 114906347638240218}
   - component: {fileID: 114485595166947346}
+  - component: {fileID: 82367149158109228}
   m_Layer: 0
   m_Name: Tram
   m_TagString: Untagged
@@ -246,7 +247,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 180918}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.74114, y: -0.0000011425612, z: 0.01}
+  m_LocalPosition: {x: -17.30312, y: 0.000002264758, z: 18.99817}
   m_LocalScale: {x: 1.7478012, y: 1.7478013, z: 1.7478013}
   m_Children:
   - {fileID: 418824}
@@ -974,6 +975,86 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.57, y: 2.09, z: 5.6}
   m_Center: {x: 0, y: 1.11, z: 0}
+--- !u!82 &82367149158109228
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 180918}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 90e9e70c517224f58a65882d57775fa2, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114485595166947346
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -987,6 +1068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skins: {fileID: 11400000, guid: a000320a77d8fb24db0dfaf81c0c179a, type: 2}
   skinLocation: {fileID: 105942}
+  bloodNoiseSource: {fileID: 0}
 --- !u!114 &114906347638240218
 MonoBehaviour:
   m_ObjectHideFlags: 1
