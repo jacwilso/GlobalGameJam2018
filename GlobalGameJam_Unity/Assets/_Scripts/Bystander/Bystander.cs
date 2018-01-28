@@ -33,7 +33,7 @@ public class Bystander : MonoBehaviour {
             //agent.pathStatus == NavMeshPathStatus.PathComplete && 
             dist <= TramSpawner.instance.PositionDelta)
         {
-            agent.enabled = false;
+            StopAgent();
         }
     }
 
@@ -58,5 +58,10 @@ public class Bystander : MonoBehaviour {
         }
         agent.enabled = true;
         agent.SetDestination(point);
+    }
+
+    public virtual void StopAgent()
+    {
+        agent.isStopped = true;
     }
 }
