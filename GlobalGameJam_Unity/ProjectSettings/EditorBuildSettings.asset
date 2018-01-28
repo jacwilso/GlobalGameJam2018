@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/main.unity
     guid: 43ed38ad486201047b19c110f50ead85
+  - enabled: 1
+    path: Assets/_Scenes/Alan's Prototype.unity
+    guid: 086990986789ff5418ce123959ec3f39

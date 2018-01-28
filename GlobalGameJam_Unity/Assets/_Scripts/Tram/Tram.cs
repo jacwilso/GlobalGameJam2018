@@ -11,7 +11,7 @@ public class Tram : MonoBehaviour {
     private bool pathSelected, offscreen;
     private SplineWalker walker;
     private Renderer rend;
-
+	
 	private List<Vector3> splineSamples;
 	private bool followSpline = false;
 	private int splineIndex = -1;
@@ -26,7 +26,6 @@ public class Tram : MonoBehaviour {
         walker.enabled = false;
         skinLocation.GetComponent<Renderer>().material = skins.Skin;
         rend = GetComponent<Renderer>();
-		//bloodNoiseSource = GetComponent<AudioSource> ();
     }
 
     private void Update () {
@@ -65,13 +64,11 @@ public class Tram : MonoBehaviour {
 			direction.y = Mathf.Abs(direction.y);
 			direction += TramSpawner.instance.Uppiness * Vector3.up;
 
-			//bloodNoiseSource.Play ();
-
 			Ragdoll ragdoll = collision.gameObject.GetComponent<Ragdoll>();
 
 			if (ragdoll.animator) ragdoll.animator.enabled = false;
 
-			if (collision.gameObject.GetComponent<Ragcar>())
+			if (collision.gameObject.GetComponent<Car>())
 			{
 				foreach (Collider rc in ragdoll.ragdollColliders)
 				{
@@ -102,8 +99,6 @@ public class Tram : MonoBehaviour {
         }
     }
 
-
-
     private void Offscreen()
     {
         if (!pathSelected)
@@ -128,11 +123,14 @@ public class Tram : MonoBehaviour {
         //walker.enabled = true;
         if (TramSpawner.instance.State == LeverState.Center)
         {
+            walker.lookForward = false;
+            StartFlip();
+            //StartCoroutine(StartFlip());
             this.enabled = false;
             TramSpawner.instance.enabled = false;
         }
     }
-
+	
 	private void FollowPath()
 	{
 		if (splineSamples == null)
@@ -174,4 +172,33 @@ public class Tram : MonoBehaviour {
 			transform.position = splineSamples[splineIndex] + transform.forward * distance;
 		}
 	}
+
+    private void StartFlip()
+    {
+        ParticleSystem ps = GetComponentInChildren<ParticleSystem>();
+        ps.Play();
+        Rigidbody rb = GetComponent<Rigidbody>();
+        rb.AddTorque(new Vector3(TramSpawner.instance.FlipSpeed, 0, TramSpawner.instance.FlipSpeed));
+    }
+
+    /*private IEnumerator StartFlip()
+    {
+        ParticleSystem ps = GetComponentInChildren<ParticleSystem>();
+        ps.Play();
+        Vector3 start = transform.eulerAngles;
+        Vector3 end = start + Vector3.up * 90f;
+        Vector3 angle = start;
+        float elapsed = 0;
+        float time = TramSpawner.instance.FlipTime;
+        float speed = TramSpawner.instance.FlipSpeed;
+        while (elapsed < time)
+        {
+            elapsed += Time.deltaTime;
+            angle.y = Mathf.Lerp(start.y, end.y, elapsed / time);
+            angle.z += Time.deltaTime * speed;
+            transform.eulerAngles = angle;
+            yield return null;
+        }
+        ps.Stop();
+    }*/
 }

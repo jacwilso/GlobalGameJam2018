@@ -14,13 +14,13 @@ public class LeverController : MonoBehaviour {
     [Tooltip ("The time the lever is in the center zone.")]
     [SerializeField] private float centerTime;
 
-    private float rotationAngle = 15f;
+    private float rotationAngle = 30f; // used to be 15f for prim lever
     private LeverState state = LeverState.Right;
     private Coroutine leverCo;
     private AudioSource audioSrc;
 
 	private void Start () {
-        rotationAngle = 360f - Mathf.Abs(transform.eulerAngles.x);
+        //rotationAngle = 360f - Mathf.Abs(transform.eulerAngles.x);
         leverCo = null;
         audioSrc = GetComponent<AudioSource>();
 
@@ -47,8 +47,9 @@ public class LeverController : MonoBehaviour {
     private IEnumerator SwitchLever()
     {
         LeverState intoState = state;
-        float newAngle = (2 * ((int)state) - 1) * rotationAngle;
-        float notCenterTime = (leverTime - centerTime) / 2f;
+		float newAngle = (((int)state) - 1) * rotationAngle; //(2 * ((int)state) - 1) * rotationAngle;
+		float currentAngle = -(rotationAngle + (((int)state) - 1) * rotationAngle);
+		float notCenterTime = (leverTime - centerTime) / 2f;
         bool switched = false;
         float elapsed = 0;
         float pct;
@@ -56,8 +57,8 @@ public class LeverController : MonoBehaviour {
         {
             elapsed += Time.deltaTime;
             pct = elapsed / leverTime;
-            float angle = Mathf.Lerp(-newAngle, newAngle, pct);
-            transform.eulerAngles = Vector3.right * angle;
+            float angle = Mathf.Lerp(currentAngle, newAngle, pct); // float angle = Mathf.Lerp(-newAngle, newAngle, pct);
+			transform.eulerAngles = Vector3.right * angle;
 
             // Center State
             if (notCenterTime < pct && pct < centerTime + notCenterTime)

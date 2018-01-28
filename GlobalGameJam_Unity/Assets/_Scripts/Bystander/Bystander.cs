@@ -6,6 +6,9 @@ using UnityEngine.AI;
 [RequireComponent (typeof(NavMeshAgent), typeof(Collider), typeof(Rigidbody))]
 public class Bystander : MonoBehaviour {
 
+    public delegate void TramCollisionDelegate();
+    public static TramCollisionDelegate tramCollision;
+
     [Tooltip("The time between the tram leaving the screen and the bystanders entering onto the screen.")]
     public float waitTime;
 
@@ -48,8 +51,15 @@ public class Bystander : MonoBehaviour {
 
     protected virtual void TramCollision()
     {
+        if (tramCollision != null)
+        {
+            tramCollision();
+        }
         SoundLibrary.instance.PlayRandom(soundGroup);
+
 		agent.enabled = false;
+
+        GetComponent<Ragdoll>().Dissolve();
     }
 
     public virtual void SetDestination(Vector3 point)

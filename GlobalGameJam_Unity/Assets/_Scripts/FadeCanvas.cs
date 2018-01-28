@@ -20,6 +20,7 @@ public class FadeCanvas : MonoBehaviour {
 	private void Update () {
 		if (!isFade && Input.GetKeyDown(KeyCode.Space))
         {
+            TramSpawner.instance.Spawn();
             StartCoroutine(Fade());
         }
 	}

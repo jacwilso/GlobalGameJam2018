@@ -9,7 +9,7 @@ public class Car : Bystander {
     protected override void Start()
     {
         base.Start();
-        ps = GetComponent<ParticleSystem>();
+        ps = GetComponentInChildren<ParticleSystem>();
     }
 
     protected override void TramCollision()

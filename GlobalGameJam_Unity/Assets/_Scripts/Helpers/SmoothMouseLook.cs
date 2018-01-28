@@ -127,7 +127,7 @@ public class SmoothMouseLook : MonoBehaviour
 			transform.localRotation = originalRotation * yQuaternion;
 		}
 	}
-	void Start()
+	void Awake()
 	{
 		Rigidbody rb = GetComponent<Rigidbody>();
 		if (rb)

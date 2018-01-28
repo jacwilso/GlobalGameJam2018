@@ -5,6 +5,9 @@ using UnityEngine;
 public class TramSpawner : MonoBehaviour {
     public static TramSpawner instance;
 
+    public delegate void TramCenter();
+    public static TramCenter tramCenter;
+
     public Transform Intersection
     {
         get { return intersection.transform; }
@@ -38,6 +41,7 @@ public class TramSpawner : MonoBehaviour {
     {
         get
         {
+            //return intersection.Center;
             if (lever.State == LeverState.Left)
             {
                 return intersection.Left;
@@ -55,6 +59,8 @@ public class TramSpawner : MonoBehaviour {
     {
         get
         {
+            //lastState = LeverState.Center;
+            //return LeverState.Center;
             lastState = lever.State;
             return lever.State;
         }
@@ -75,6 +81,16 @@ public class TramSpawner : MonoBehaviour {
         get { return uppiness; }
     }
 
+    public float FlipTime
+    {
+        get { return tramFlipTime; }
+    }
+
+    public float FlipSpeed
+    {
+        get { return tramFlipSpeed; }
+    }
+
     public float PositionDelta
     {
         get { return positionDelta; }
@@ -82,6 +98,7 @@ public class TramSpawner : MonoBehaviour {
 
     [SerializeField] private float tramSpeed, uppiness;
 	[SerializeField] private Vector2 tramForce;
+    [SerializeField] private float tramFlipTime, tramFlipSpeed;
 	[SerializeField] private float positionDelta;
     [SerializeField] private GameObject tram;
     [SerializeField] private Transform offscreen;
@@ -107,21 +124,14 @@ public class TramSpawner : MonoBehaviour {
 
     private void Start () {
         lever = FindObjectOfType<LeverController>();
-        Spawn();
-	}
-	
-	private void Update () {
-
 	}
 
     private void OnDeactivate()
     {
-
-    }
-
-    private void Spawn()
-    {
-        Instantiate(tram, transform.position, transform.rotation, transform);
+        if (tramCenter != null)
+        {
+            tramCenter();
+        }
     }
 
     private IEnumerator WaitSpawn()
@@ -140,6 +150,11 @@ public class TramSpawner : MonoBehaviour {
         yield return new WaitForSeconds(scenarios[scenarioIndex].bystanderTime);
         scenarios[scenarioIndex].Spawn(lastState, bystanderManager);
         StartCoroutine(WaitSpawn());
+    }
+
+    public void Spawn()
+    {
+        Instantiate(tram, transform.position, transform.rotation, transform);
     }
 
     public void BringInBystanders()
