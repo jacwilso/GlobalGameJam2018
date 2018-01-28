@@ -49,6 +49,7 @@ public class Bystander : MonoBehaviour {
     protected virtual void TramCollision()
     {
         SoundLibrary.instance.PlayRandom(soundGroup);
+		agent.enabled = false;
     }
 
     public virtual void SetDestination(Vector3 point)
