@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SoundLibrary : MonoBehaviour
 {
+	public static SoundLibrary instance;
+
 	[SerializeField]
 	bool _spatialize = true;
 
@@ -12,10 +14,6 @@ public class SoundLibrary : MonoBehaviour
 
 	[SerializeField]
 	AudioClip[] _clips;
-
-	[SerializeField]
-	AudioClip[] _randomizedClips;
-	int _fyIndex = 0;
 
 	[SerializeField]
 	Transform[] _transforms;
@@ -29,6 +27,15 @@ public class SoundLibrary : MonoBehaviour
 
 	void Awake()
 	{
+		if (instance)
+		{
+			DestroyImmediate(gameObject);
+		}
+		else
+		{
+			instance = this;
+		}
+
 		_sources = new AudioSource[_numSources];
 		_numPlays = new int[_numSources];
 
@@ -94,7 +101,7 @@ public class SoundLibrary : MonoBehaviour
 		return index;
 	}
 
-	public int PlayRandom(float volume = -1f, int transformIndex = -1, Vector3 offset = new Vector3(), bool relativePosition = true)
+	public int PlayRandom(SoundGroup group, float volume = -1f, int transformIndex = -1, Vector3 offset = new Vector3(), bool relativePosition = true)
 	{
 		AudioSource source = null;
 		int index = -1;
@@ -114,32 +121,31 @@ public class SoundLibrary : MonoBehaviour
 			return -1;
 		}
 
-		if (_randomizedClips.Length == 0)
+		if (group.soundClips.Length == 0)
 		{
-			Debug.Log("[SoundLibrary] No randomized clips to play.");
+			Debug.Log("[SoundLibrary] No sound clips in the sound group " + group.name + ".");
 			return -1;
 		}
 
-		if (_fyIndex >= _randomizedClips.Length)
+		if (group.currentIndex >= group.soundClips.Length)
 		{
-			_fyIndex = 0;
+			group.currentIndex = 0;
 			AudioClip temp;
 			int rand;
 
-			for (int i = 0; i < _randomizedClips.Length; i++)
+			for (int i = 0; i < group.soundClips.Length; i++)
 			{
-				temp = _randomizedClips[i];
-				rand = Random.Range(i, _randomizedClips.Length - 1);
-				_randomizedClips[i] = _randomizedClips[rand];
-				_randomizedClips[rand] = temp;
-				
+				temp = group.soundClips[i];
+				rand = Random.Range(i, group.soundClips.Length - 1);
+				group.soundClips[i] = group.soundClips[rand];
+				group.soundClips[rand] = temp;
 			}
 		}
 
 		Transform t = (transformIndex >= 0 && transformIndex < _transforms.Length) ? _transforms[transformIndex] : transform;
 		source.transform.parent = (relativePosition) ? t : null;
 		source.transform.position = (relativePosition) ? t.position + offset : offset;
-		source.clip = _randomizedClips[_fyIndex++];
+		source.clip = group.soundClips[group.currentIndex++];
 		source.volume = (volume >= 0) ? volume : _defaultVolume;
 		source.loop = false;
 		source.spatialize = _spatialize;
