@@ -22,7 +22,7 @@ public class TramSpawner : MonoBehaviour {
     {
         get
         {
-            return intersection.Center;
+            //return intersection.Center;
             if (lever.State == LeverState.Left)
             {
                 return intersection.Left;
@@ -40,8 +40,8 @@ public class TramSpawner : MonoBehaviour {
     {
         get
         {
-            lastState = LeverState.Center;
-            return LeverState.Center;
+            //lastState = LeverState.Center;
+            //return LeverState.Center;
             lastState = lever.State;
             return lever.State;
         }
