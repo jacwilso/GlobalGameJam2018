@@ -82,8 +82,6 @@ public class Tram : MonoBehaviour {
         }
     }
 
-
-
     private void Offscreen()
     {
         if (!pathSelected)
@@ -104,8 +102,40 @@ public class Tram : MonoBehaviour {
         walker.enabled = true;
         if (TramSpawner.instance.State == LeverState.Center)
         {
+            walker.lookForward = false;
+            StartFlip();
+            //StartCoroutine(StartFlip());
             this.enabled = false;
             TramSpawner.instance.enabled = false;
         }
     }
+
+    private void StartFlip()
+    {
+        ParticleSystem ps = GetComponentInChildren<ParticleSystem>();
+        ps.Play();
+        Rigidbody rb = GetComponent<Rigidbody>();
+        rb.AddTorque(new Vector3(TramSpawner.instance.FlipSpeed, 0, TramSpawner.instance.FlipSpeed));
+    }
+
+    /*private IEnumerator StartFlip()
+    {
+        ParticleSystem ps = GetComponentInChildren<ParticleSystem>();
+        ps.Play();
+        Vector3 start = transform.eulerAngles;
+        Vector3 end = start + Vector3.up * 90f;
+        Vector3 angle = start;
+        float elapsed = 0;
+        float time = TramSpawner.instance.FlipTime;
+        float speed = TramSpawner.instance.FlipSpeed;
+        while (elapsed < time)
+        {
+            elapsed += Time.deltaTime;
+            angle.y = Mathf.Lerp(start.y, end.y, elapsed / time);
+            angle.z += Time.deltaTime * speed;
+            transform.eulerAngles = angle;
+            yield return null;
+        }
+        ps.Stop();
+    }*/
 }

@@ -5,6 +5,9 @@ using UnityEngine;
 public class TramSpawner : MonoBehaviour {
     public static TramSpawner instance;
 
+    public delegate void TramCenter();
+    public static TramCenter tramCenter;
+
     public Transform Intersection
     {
         get { return intersection.transform; }
@@ -19,6 +22,7 @@ public class TramSpawner : MonoBehaviour {
     {
         get
         {
+            return intersection.Center;
             if (lever.State == LeverState.Left)
             {
                 return intersection.Left;
@@ -36,6 +40,8 @@ public class TramSpawner : MonoBehaviour {
     {
         get
         {
+            lastState = LeverState.Center;
+            return LeverState.Center;
             lastState = lever.State;
             return lever.State;
         }
@@ -56,6 +62,16 @@ public class TramSpawner : MonoBehaviour {
         get { return uppiness; }
     }
 
+    public float FlipTime
+    {
+        get { return tramFlipTime; }
+    }
+
+    public float FlipSpeed
+    {
+        get { return tramFlipSpeed; }
+    }
+
     public float PositionDelta
     {
         get { return positionDelta; }
@@ -63,6 +79,7 @@ public class TramSpawner : MonoBehaviour {
 
     [SerializeField] private float tramSpeed, uppiness;
 	[SerializeField] private Vector2 tramForce;
+    [SerializeField] private float tramFlipTime, tramFlipSpeed;
 	[SerializeField] private float positionDelta;
     [SerializeField] private GameObject tram;
     [SerializeField] private Transform offscreen;
@@ -90,14 +107,13 @@ public class TramSpawner : MonoBehaviour {
         lever = FindObjectOfType<LeverController>();
         Spawn();
 	}
-	
-	private void Update () {
-
-	}
 
     private void OnDeactivate()
     {
-
+        if (tramCenter != null)
+        {
+            tramCenter();
+        }
     }
 
     private void Spawn()
