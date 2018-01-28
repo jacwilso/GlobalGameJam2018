@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider), typeof(Rigidbody))]
-public class Ragdoll : MonoBehaviour {
+public class Ragdoll : MonoBehaviour
+{
 
 	[HideInInspector]
 	public Collider preRagdollCollider;
@@ -20,7 +21,8 @@ public class Ragdoll : MonoBehaviour {
 	[HideInInspector]
 	public Animator animator;
 
-	protected virtual void Start () {
+	protected virtual void Start()
+	{
 		preRagdollCollider = GetComponent<Collider>();
 		preRagdollRigidbody = GetComponent<Rigidbody>();
 
@@ -59,16 +61,16 @@ public class Ragdoll : MonoBehaviour {
 		}
 	}
 
-    public void Settled()
-    {
-        StartCoroutine(SettleCo());
-    }
+	public void Settled()
+	{
+		StartCoroutine(SettleCo());
+	}
 
-    private IEnumerator SettleCo()
-    {
-        yield return new WaitForSeconds(Random.Range(8f, 15f));
-        EnableRagdoll(false);
-    }
+	private IEnumerator SettleCo()
+	{
+		yield return new WaitForSeconds(Random.Range(8f, 15f));
+		EnableRagdoll(false);
+	}
 
 	void OnCollisionEnter(Collision collision)
 	{
@@ -78,6 +80,31 @@ public class Ragdoll : MonoBehaviour {
 
 			OtherDissolveCo(collision.gameObject);
 		}
+		else if (collision.gameObject.GetComponent<Tram>() || (collision.gameObject.GetComponent<Car>() && GetComponent<Car>() == null))
+		{
+			Vector3 direction = ((Vector3)Random.insideUnitCircle + collision.gameObject.transform.forward);
+			direction.y = Mathf.Abs(direction.y);
+			direction += TramSpawner.instance.Uppiness * Vector3.up;
+
+			if (animator) animator.enabled = false;
+
+			if (collision.gameObject.GetComponent<Car>())
+			{
+				foreach (Collider rc in ragdollColliders)
+				{
+					rc.transform.SetParent(null);
+				}
+			}
+
+			// Disable the pre-ragdoll collider and rigidbody
+			preRagdollCollider.enabled = false;
+			preRagdollRigidbody.useGravity = false;
+			preRagdollRigidbody.isKinematic = true;
+			preRagdollRigidbody.velocity = Vector3.zero;
+			preRagdollRigidbody.angularVelocity = Vector3.zero;
+
+			EnableRagdoll(true);
+		}
 	}
 
 	private IEnumerator OtherDissolveCo(GameObject go)
@@ -86,18 +113,18 @@ public class Ragdoll : MonoBehaviour {
 		go.GetComponent<Collider>().enabled = false;
 		Destroy(go, 1f);
 	}
+
+	public void EnableRagdoll(bool isEnabled)
+	{
+		foreach (Collider rc in ragdollColliders)
+		{
+			rc.enabled = isEnabled;
+		}
+
+		foreach (Rigidbody rr in ragdollRigidbodies)
+		{
+			rr.isKinematic = !isEnabled;
+			rr.useGravity = isEnabled;
+		}
+	}
 }
-
-    public void EnableRagdoll(bool isEnabled)
-    {
-        foreach (Collider rc in ragdollColliders)
-        {
-            rc.enabled = isEnabled;
-        }
-
-        foreach (Rigidbody rr in ragdollRigidbodies)
-        {
-            rr.isKinematic = !isEnabled;
-            rr.useGravity = isEnabled;
-        }
-    }

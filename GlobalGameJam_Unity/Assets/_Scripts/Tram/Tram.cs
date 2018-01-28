@@ -58,33 +58,7 @@ public class Tram : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.GetComponent<Bystander>())
-        {
-			Vector3 direction = ((Vector3)Random.insideUnitCircle + transform.forward);
-			direction.y = Mathf.Abs(direction.y);
-			direction += TramSpawner.instance.Uppiness * Vector3.up;
-
-			Ragdoll ragdoll = collision.gameObject.GetComponent<Ragdoll>();
-
-			if (ragdoll.animator) ragdoll.animator.enabled = false;
-
-			if (collision.gameObject.GetComponent<Car>())
-			{
-				foreach (Collider rc in ragdoll.ragdollColliders)
-				{
-					rc.transform.SetParent(null);
-				}
-			}
-
-			// Disable the pre-ragdoll collider and rigidbody
-			ragdoll.preRagdollCollider.enabled = false;
-			ragdoll.preRagdollRigidbody.useGravity = false;
-			ragdoll.preRagdollRigidbody.isKinematic = true;
-			ragdoll.preRagdollRigidbody.velocity = Vector3.zero;
-			ragdoll.preRagdollRigidbody.angularVelocity = Vector3.zero;
-
-            ragdoll.EnableRagdoll(true);
-        }
+		// ragdolling code used to be here
     }
 
     private void Offscreen()
