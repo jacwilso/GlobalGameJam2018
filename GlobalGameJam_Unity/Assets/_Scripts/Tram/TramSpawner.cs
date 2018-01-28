@@ -10,6 +10,25 @@ public class TramSpawner : MonoBehaviour {
         get { return intersection.transform; }
     }
 
+	public List<Vector3> SplineSamples
+	{
+		get
+		{
+			if (lever.State == LeverState.Left)
+			{
+				return intersection.LeftSamples;
+			}
+			else if (lever.State == LeverState.Right)
+			{
+				return intersection.RightSamples;
+			}
+			else
+			{
+				return intersection.CenterSamples;
+			}
+		}
+	}
+
     public Transform Offscreen
     {
         get { return offscreen; }

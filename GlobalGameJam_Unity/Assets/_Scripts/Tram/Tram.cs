@@ -12,11 +12,15 @@ public class Tram : MonoBehaviour {
     private SplineWalker walker;
     private Renderer rend;
 
+	private List<Vector3> splineSamples;
+	private bool followSpline = false;
+	private int splineIndex = -1;
+
 
 	//public AudioSource bloodNoiseSource;
 
 
-    private void Start()
+	private void Start()
     {
         walker = GetComponent<SplineWalker>();
         walker.enabled = false;
@@ -34,14 +38,23 @@ public class Tram : MonoBehaviour {
             Offscreen();
         } else 
         {
-            if (!walker.enabled)
-            {
-                transform.position += TramSpawner.instance.TramSpeed * transform.forward;
-            } else
-            {
-                walker.enabled = !walker.Complete;
-            }
-        }
+			if (!followSpline)
+			{
+				transform.position += TramSpawner.instance.TramSpeed * transform.forward;
+			}
+			else
+			{
+				FollowPath();
+			}
+
+			//if (!walker.enabled)
+			//{
+			//    transform.position += TramSpawner.instance.TramSpeed * transform.forward;
+			//} else
+			//{
+			//    walker.enabled = !walker.Complete;
+			//}
+		}
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -107,12 +120,58 @@ public class Tram : MonoBehaviour {
         pathSelected = true;
         BezierSpline spline = TramSpawner.instance.Path;
         spline.transform.position = transform.position;
-        walker.spline = TramSpawner.instance.Path;
-        walker.enabled = true;
+
+		splineSamples = TramSpawner.instance.SplineSamples;
+		followSpline = true;
+		splineIndex = -1;
+        //walker.spline = TramSpawner.instance.Path;
+        //walker.enabled = true;
         if (TramSpawner.instance.State == LeverState.Center)
         {
             this.enabled = false;
             TramSpawner.instance.enabled = false;
         }
     }
+
+	private void FollowPath()
+	{
+		if (splineSamples == null)
+		{
+			return;
+		}
+
+		// Initialize the spline
+		if (splineIndex == -1)
+		{
+			splineIndex = 0;
+
+			transform.forward = (splineSamples[splineIndex + 1] - splineSamples[splineIndex]).normalized;
+		}
+		
+		// Move toward the next sample point on the spline
+		transform.position += TramSpawner.instance.TramSpeed * transform.forward;
+
+		// If we've past the next spline, update our direction
+		if (Vector3.Dot(splineSamples[splineIndex + 1] - transform.position, transform.forward) < 0)
+		{
+			splineIndex++;
+
+			// If we're at the end of the spline, stop following it
+			if (splineIndex == splineSamples.Count - 1)
+			{
+				followSpline = false;
+
+				GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+
+				return;
+			}
+
+			// Update our movement direction
+			transform.forward = (splineSamples[splineIndex + 1] - splineSamples[splineIndex]).normalized;
+
+			// Move the remainder of our distance toward the next sample point
+			float distance = (transform.position - splineSamples[splineIndex]).magnitude;
+			transform.position = splineSamples[splineIndex] + transform.forward * distance;
+		}
+	}
 }
