@@ -25,6 +25,7 @@ public class Car : Bystander {
 		}
         movementAudio = GetComponent<AudioSource>();
         movementAudio.clip = movementSound.GetClip();
+        movementAudio.Play();
 	}
 
     protected override void TramCollision()
