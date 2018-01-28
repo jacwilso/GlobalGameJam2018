@@ -78,7 +78,7 @@ public class Bystander : MonoBehaviour {
         SoundLibrary.instance.PlayRandom(collisionSound);
 
 		agent.enabled = false;
-        GetComponent<Ragdoll>().Settled();
+        GetComponent<Ragdoll>().Dissolve();
     }
 
     public virtual void SetDestination(Vector3 point)
