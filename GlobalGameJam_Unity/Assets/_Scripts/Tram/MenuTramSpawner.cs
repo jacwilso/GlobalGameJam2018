@@ -68,6 +68,7 @@ public class MenuTramSpawner : MonoBehaviour {
 
     private void Spawn()
     {
+        Howard.instance.PlayLine();
         elapsed = 0f;
         Instantiate(tram, transform.position, transform.rotation, transform);
     }

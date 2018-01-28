@@ -12,8 +12,10 @@ public class Man : MonoBehaviour {
         anim = GetComponent<Animator>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
+	public void Update () {
+		if (Input.GetKeyDown(KeyCode.Space))
+        {
+            anim.SetTrigger(Anim_Swing);
+        }
 	}
 }
