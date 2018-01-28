@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 4098212563988518}
   - component: {fileID: 198023050690922182}
   - component: {fileID: 199404232012066916}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DebrisSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 54401801263375778}
   - component: {fileID: 114692490382561450}
   - component: {fileID: 114180330647807926}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: schoolbus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 4820223336586732}
   - component: {fileID: 198474308935721812}
   - component: {fileID: 199082150310892348}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DerisFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 4054071745840328}
   - component: {fileID: 198230802187029462}
   - component: {fileID: 199705768555867290}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BigExplosionEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 4390047615556864}
   - component: {fileID: 198517176213890844}
   - component: {fileID: 199394295019769722}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 4346451788407610}
   - component: {fileID: 198764140048209424}
   - component: {fileID: 199612875466353410}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShockWave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 4547314859696364}
   - component: {fileID: 198643407443208788}
   - component: {fileID: 199942042429043528}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 4099081131551316}
   - component: {fileID: 198856735472442748}
   - component: {fileID: 199102164799095846}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Embers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 4367062687667698}
   - component: {fileID: 198642890809008280}
   - component: {fileID: 199542884382523244}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Debris
   m_TagString: Untagged
   m_Icon: {fileID: 0}

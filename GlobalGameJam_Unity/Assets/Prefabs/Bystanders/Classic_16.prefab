@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 4012354271013064}
   - component: {fileID: 198447203742969020}
   - component: {fileID: 199595322745447522}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShockWave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 82786996231415854}
   - component: {fileID: 114299017419543910}
   - component: {fileID: 114561821792654534}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Classic_16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 4993295208745504}
   - component: {fileID: 198146335238508142}
   - component: {fileID: 199924337028108018}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Debris
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -331,7 +331,7 @@ GameObject:
   - component: {fileID: 4715117136237882}
   - component: {fileID: 198620531183429184}
   - component: {fileID: 199721921288378660}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -386,7 +386,7 @@ GameObject:
   - component: {fileID: 4192668774319220}
   - component: {fileID: 198410076646798216}
   - component: {fileID: 199605152620950522}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DebrisSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -596,7 +596,7 @@ GameObject:
   - component: {fileID: 4974058579523890}
   - component: {fileID: 198290924782843072}
   - component: {fileID: 199715826670827784}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -613,7 +613,7 @@ GameObject:
   - component: {fileID: 4145925642563690}
   - component: {fileID: 198331412252021746}
   - component: {fileID: 199234726140700874}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DerisFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -665,7 +665,7 @@ GameObject:
   - component: {fileID: 4475180889268000}
   - component: {fileID: 198392986591274194}
   - component: {fileID: 199317787564315742}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Embers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -745,7 +745,7 @@ GameObject:
   - component: {fileID: 4033842588760260}
   - component: {fileID: 198860668405538938}
   - component: {fileID: 199003835585669148}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BigExplosionEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
