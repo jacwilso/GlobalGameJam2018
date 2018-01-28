@@ -62,6 +62,8 @@ public class Tram : MonoBehaviour {
 			ragdoll.preRagdollCollider.enabled = false;
 			ragdoll.preRagdollRigidbody.useGravity = false;
 			ragdoll.preRagdollRigidbody.isKinematic = true;
+			ragdoll.preRagdollRigidbody.velocity = Vector3.zero;
+			ragdoll.preRagdollRigidbody.angularVelocity = Vector3.zero;
 
 			// Enable every collider in the bystander ragdoll
 			foreach (Collider rc in ragdoll.ragdollColliders)
