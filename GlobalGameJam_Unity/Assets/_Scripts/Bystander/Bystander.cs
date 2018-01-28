@@ -16,10 +16,12 @@ public class Bystander : MonoBehaviour {
     [SerializeField] protected GameObject skinLocation;
     [SerializeField] protected SoundGroup collisionSound, intermittentSound, movementSound;
     [SerializeField] protected float paradeSpeed = 0.7f;
+    [SerializeField] private float speakTime = 2;
 
     protected NavMeshAgent agent;
     private bool wasVisible;
     private Vector3 destination;
+    private float elapsed;
 
     protected virtual void Start () {
         agent = GetComponent<NavMeshAgent>();
@@ -39,7 +41,8 @@ public class Bystander : MonoBehaviour {
             return;
         }
         float dist = agent.remainingDistance;
-        if (//dist != Mathf.Infinity && 
+        if (!agent.isStopped &&
+            //dist != Mathf.Infinity && 
             //agent.pathStatus == NavMeshPathStatus.PathComplete && 
             dist <= TramSpawner.instance.PositionDelta)
         {
@@ -96,5 +99,6 @@ public class Bystander : MonoBehaviour {
     public virtual void StopAgent()
     {
         agent.isStopped = true;
+        SoundLibrary.instance.PlayRandom(intermittentSound);
     }
 }

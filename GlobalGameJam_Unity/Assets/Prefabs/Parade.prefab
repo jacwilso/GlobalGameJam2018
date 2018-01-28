@@ -100,7 +100,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1774762864436774}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 32.4, y: 0, z: -30}
+  m_LocalPosition: {x: 32, y: 0, z: -31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4640200341838756}
@@ -129,7 +129,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1069795171481676}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 32.3, y: 0, z: 38.8}
+  m_LocalPosition: {x: 32.07, y: 0, z: 36.96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4668370947310968}
@@ -143,7 +143,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1383605749029378}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.3, y: 0, z: 55}
+  m_LocalPosition: {x: 0.43, y: 0, z: 51.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4090281053379312}
@@ -156,7 +156,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1554324169321626}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.3, y: 0, z: -56.1}
+  m_LocalPosition: {x: 0.14, y: 0, z: -47.31}
   m_LocalScale: {x: 0.67496645, y: 0.67496645, z: 0.67496645}
   m_Children: []
   m_Father: {fileID: 4581602429404474}
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vehicles:
-  - quantity: 1
+  - quantity: 10
     bystander: {fileID: 114561821792654534, guid: 6dd9f6a392679b94c8003f2bc6ec6a59,
       type: 2}
   parade: []
@@ -213,7 +213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 918869d23405ba74a8b4b59502c35fc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRadius: 8.07
+  spawnRadius: 2
 --- !u!114 &114536984272630620
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5ec172f0019374478ce7002b8aa342b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: {x: 5, y: 0.1}
+  size: {x: 1, y: 0.1}
   trackAreaColor: {r: 0.09035821, g: 0.015686274, b: 1, a: 1}
   spawnAreaColor: {r: 0, g: 0.006896496, b: 1, a: 1}
 --- !u!114 &114638678211375444
@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5ec172f0019374478ce7002b8aa342b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: {x: 5, y: 0.1}
+  size: {x: 1, y: 0.1}
   trackAreaColor: {r: 0.04962785, g: 0.015686274, b: 1, a: 1}
   spawnAreaColor: {r: 0.07586241, g: 0, b: 1, a: 1}
 --- !u!114 &114793050946927490
@@ -253,4 +253,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 918869d23405ba74a8b4b59502c35fc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRadius: 8
+  spawnRadius: 2

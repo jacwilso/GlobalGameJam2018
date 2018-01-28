@@ -648,9 +648,9 @@ GameObject:
   - component: {fileID: 95114765156048108}
   - component: {fileID: 54563653544844552}
   - component: {fileID: 65607830389649702}
-  - component: {fileID: 114935979358232626}
   - component: {fileID: 195283834728687664}
   - component: {fileID: 114294829614221380}
+  - component: {fileID: 114267052118948142}
   m_Layer: 0
   m_Name: Batman Ragdoll
   m_TagString: Untagged
@@ -2389,6 +2389,26 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114267052118948142
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1563802983115066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb2d34d8afea8844082e00f777419cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitTime: 0
+  skins: {fileID: 0}
+  skinLocation: {fileID: 0}
+  collisionSound: {fileID: 11400000, guid: ef749a111abb68f4bac0f988e39a4047, type: 2}
+  intermittentSound: {fileID: 11400000, guid: bb6014cf7057f0a4391018577398fbce, type: 2}
+  movementSound: {fileID: 0}
+  paradeSpeed: 5
+  speakTime: 2
+  pctRunning: 0
 --- !u!114 &114294829614221380
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2405,24 +2425,6 @@ MonoBehaviour:
   preRagdollRigidbody: {fileID: 0}
   ragdollRigidbodies: []
   animator: {fileID: 0}
---- !u!114 &114935979358232626
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1563802983115066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb2d34d8afea8844082e00f777419cf3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waitTime: 0
-  skins: {fileID: 0}
-  skinLocation: {fileID: 0}
-  collisionSound: {fileID: 11400000, guid: ef749a111abb68f4bac0f988e39a4047, type: 2}
-  intermittentSound: {fileID: 0}
-  movementSound: {fileID: 0}
-  pctRunning: 0
 --- !u!135 &135723616068916820
 SphereCollider:
   m_ObjectHideFlags: 1

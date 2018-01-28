@@ -847,9 +847,10 @@ MonoBehaviour:
   skins: {fileID: 0}
   skinLocation: {fileID: 0}
   collisionSound: {fileID: 11400000, guid: 5761e62960aa42f4eb90219547eda84a, type: 2}
-  intermittentSound: {fileID: 0}
+  intermittentSound: {fileID: 11400000, guid: a45c5e1791025bd42ac5d2725eb99daa, type: 2}
   movementSound: {fileID: 11400000, guid: e909487839b4d2d4082ce9c89b13d3a9, type: 2}
-  paradeSpeed: 0
+  paradeSpeed: 0.5
+  speakTime: 2
   extraSkinLocations: []
 --- !u!114 &114769346740823126
 MonoBehaviour:
