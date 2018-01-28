@@ -74,4 +74,21 @@ public class Ragdoll : MonoBehaviour {
         }
         Destroy(gameObject, 1f);
     }
+
+	void OnCollisionEnter(Collision collision)
+	{
+		if (collision.gameObject.layer == LayerMask.NameToLayer("Environment"))
+		{
+			collision.gameObject.GetComponent<Rigidbody>().useGravity = true;
+
+			OtherDissolveCo(collision.gameObject);
+		}
+	}
+
+	private IEnumerator OtherDissolveCo(GameObject go)
+	{
+		yield return new WaitForSeconds(Random.Range(6f, 12f));
+		go.GetComponent<Collider>().enabled = false;
+		Destroy(go, 1f);
+	}
 }

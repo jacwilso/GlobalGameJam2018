@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26740182c709e5b4b8262f818c251a69, type: 3}
+  m_Name: Car_Skins
+  m_EditorClassIdentifier: 
+  skins:
+  - {fileID: 2100000, guid: c741189259bcd9b419d0a3e0eabfe1bd, type: 2}
+  - {fileID: 2100000, guid: ad79d1a226483e74587a30b5e6bb220a, type: 2}
+  - {fileID: 2100000, guid: df1a5473ae5b915418561ce9b640770a, type: 2}
+  - {fileID: 2100000, guid: 1e94dd0f117ff9842b4fbab06c200d48, type: 2}
+  - {fileID: 2100000, guid: 805af35c59d07b74c83c2feea24dbbdd, type: 2}
+  - {fileID: 2100000, guid: 2f4eb7fe424d3c44c9c8d31c295ecf8d, type: 2}
+  - {fileID: 2100000, guid: 74ac6e81e628e664d90df1edfd30fab1, type: 2}
+  - {fileID: 2100000, guid: df552e0d88f36604395f6905f86aacc6, type: 2}
+  - {fileID: 2100000, guid: 404159c711975764eb3951a27cf371b0, type: 2}
+  - {fileID: 2100000, guid: 4daecb48c1bc27d4eb2b4b32fd536067, type: 2}
+  - {fileID: 2100000, guid: 9fc50d5a4a01e77498e8e7b23df3469a, type: 2}
+  - {fileID: 2100000, guid: ca1fe179c0767b94cb79a6af6ac1d2aa, type: 2}
+  - {fileID: 2100000, guid: c23cebf0fee19d1479c75d2f31ad5c64, type: 2}
+  - {fileID: 2100000, guid: 9324c01e4292a7940a7e93f679247ae9, type: 2}

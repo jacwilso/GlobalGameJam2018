@@ -6,11 +6,23 @@ public class Car : Bystander {
 
     private ParticleSystem ps;
 
+	[SerializeField]
+	private Renderer[] extraSkinLocations;
+
     protected override void Start()
     {
         base.Start();
         ps = GetComponentInChildren<ParticleSystem>();
-    }
+		if (skins != null)
+		{
+			Material s = skins.Skin;
+			if (skinLocation) skinLocation.GetComponent<Renderer>().material = s;
+			foreach (Renderer r in extraSkinLocations)
+			{
+				r.GetComponent<Renderer>().material = s;
+			}
+		}
+	}
 
     protected override void TramCollision()
     {
