@@ -7202,7 +7202,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4394755334458772, guid: 0c4d599707914dd4aa71b36b72140226, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -2.2166576
+      value: 0.84
       objectReference: {fileID: 0}
     - target: {fileID: 4394755334458772, guid: 0c4d599707914dd4aa71b36b72140226, type: 2}
       propertyPath: m_LocalRotation.x
@@ -7239,6 +7239,10 @@ Prefab:
     - target: {fileID: 1763337164663276, guid: 0c4d599707914dd4aa71b36b72140226, type: 2}
       propertyPath: m_Name
       value: StopLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 1763337164663276, guid: 0c4d599707914dd4aa71b36b72140226, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c4d599707914dd4aa71b36b72140226, type: 2}
@@ -18945,7 +18949,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4394755334458772, guid: 0c4d599707914dd4aa71b36b72140226, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 7.49
+      value: 2.22
       objectReference: {fileID: 0}
     - target: {fileID: 4394755334458772, guid: 0c4d599707914dd4aa71b36b72140226, type: 2}
       propertyPath: m_LocalRotation.x
@@ -18983,6 +18987,10 @@ Prefab:
       propertyPath: m_Name
       value: StopLight (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1763337164663276, guid: 0c4d599707914dd4aa71b36b72140226, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c4d599707914dd4aa71b36b72140226, type: 2}
   m_IsPrefabParent: 0
@@ -19007,7 +19015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b2521be3843232438553faded2dabf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  matchLever: 0
+  matchLever: 1
   go: {fileID: 866939543}
   stop: {fileID: 609134156}
 --- !u!1001 &1239097847
@@ -23060,7 +23068,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1462227815464764, guid: 091bde5732628e64cb4e7c045d1ca262, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 091bde5732628e64cb4e7c045d1ca262, type: 2}

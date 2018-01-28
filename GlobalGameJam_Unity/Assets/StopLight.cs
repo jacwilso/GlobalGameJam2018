@@ -12,13 +12,10 @@ public class StopLight : MonoBehaviour {
     private Color goColor = new Color(0.2275865f, 3f, 0);
     private Color stopColor = new Color(3f, 0, 0);
     private Material goMat, stopMat;
-    private Renderer goRend, stopRend;
 
 	private void Start () {
-        goRend = GetComponent<Renderer>();
-        goMat = goRend.material;
-        stopRend = GetComponent<Renderer>();
-        stopMat = stopRend.material;
+        goMat = go.GetComponent<Renderer>().material;
+        stopMat = stop.GetComponent<Renderer>().material;
         ChangeLight();
 	}
 	
@@ -41,7 +38,5 @@ public class StopLight : MonoBehaviour {
             goMat.SetColor(Material_Emission, Color.black);
             stopMat.SetColor(Material_Emission, stopColor);
         }
-        goRend.material = goMat;
-        stopRend.material = stopMat;
     }
 }
