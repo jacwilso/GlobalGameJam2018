@@ -3252,7 +3252,7 @@ MonoBehaviour:
   collisionSound: {fileID: 11400000, guid: 5761e62960aa42f4eb90219547eda84a, type: 2}
   intermittentSound: {fileID: 0}
   movementSound: {fileID: 11400000, guid: e909487839b4d2d4082ce9c89b13d3a9, type: 2}
-  paradeSpeed: 2
+  paradeSpeed: 0.7
   extraSkinLocations:
   - {fileID: 23654173413639872}
   - {fileID: 23413376444877526}

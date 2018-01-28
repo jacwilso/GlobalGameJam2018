@@ -15,7 +15,7 @@ public class Bystander : MonoBehaviour {
     [SerializeField] protected SkinObject skins;
     [SerializeField] protected GameObject skinLocation;
     [SerializeField] protected SoundGroup collisionSound, intermittentSound, movementSound;
-    [SerializeField] protected float paradeSpeed = 5f;
+    [SerializeField] protected float paradeSpeed = 0.7f;
 
     protected NavMeshAgent agent;
     private bool wasVisible;
@@ -85,7 +85,12 @@ public class Bystander : MonoBehaviour {
     public virtual void SetPath(Vector3 point)
     {
         destination = point;
-        //agent.enabled = false;
+        transform.LookAt(point);
+        if (agent == null)
+        {
+            agent = GetComponent<NavMeshAgent>();
+        }
+        agent.enabled = false;
     }
 
     public virtual void StopAgent()

@@ -28,9 +28,9 @@ public class Parade : MonoBehaviour {
     private void SpawnVehicle()
     {
         elapsed = 0;
-        int areaIndex = Random.Range(0, 1);
+        int areaIndex = Random.Range(0, 2);
         Bystander b = Instantiate<Bystander>(vehicles[index++].bystander, areas[areaIndex].SpawnArea, Quaternion.identity, areas[areaIndex].transform);
-        b.SetDestination(areas[areaIndex].DestinationArea);
+        b.SetPath(areas[areaIndex].DestinationArea);
         index = Mathf.Clamp(index, 0, vehicles.Length - 1);
     }
 
@@ -40,7 +40,7 @@ public class Parade : MonoBehaviour {
         for (int i = 0; i < parade.Length; i++)
         {
             Bystander b = Instantiate<Bystander>(parade[i].bystander, areas[areaIndex].SpawnArea, Quaternion.identity, areas[areaIndex].transform);
-            b.SetDestination(areas[areaIndex].DestinationArea);
+            b.SetPath(areas[areaIndex].DestinationArea);
         }
     }
 }
