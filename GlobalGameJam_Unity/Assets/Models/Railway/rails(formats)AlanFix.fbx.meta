@@ -37,7 +37,12 @@ ModelImporter:
     4300004: rayH
     9500000: //RootNode
     10800000: Light
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ray
+    second: {fileID: 2100000, guid: 2c356e2204a39804d8e1a3ae64762668, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
