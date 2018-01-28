@@ -143,10 +143,6 @@ public class TramSpawner : MonoBehaviour {
         yield return new WaitForSeconds(scenarios[scenarioIndex].tramTime);
         Spawn();
         scenarioIndex++;
-        if (scenarioIndex >= scenarios.Length)
-        {
-            scenarioIndex--;
-        }
     }
 
     private IEnumerator WaitBystander()
@@ -163,6 +159,12 @@ public class TramSpawner : MonoBehaviour {
 
     public void BringInBystanders()
     {
+        if (scenarioIndex >= scenarios.Length)
+        {
+            this.enabled = false;
+            Spawn();
+            return;
+        }
         StartCoroutine(WaitBystander());
     }
 }

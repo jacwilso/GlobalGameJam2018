@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LeverController : MonoBehaviour {
 
+    public static LeverController instance;
+
     public LeverState State
     {
         get { return state; }
@@ -19,7 +21,12 @@ public class LeverController : MonoBehaviour {
     private Coroutine leverCo;
     private AudioSource audioSrc;
 
-	private void Start () {
+    private void Awake()
+    {
+        instance = this;
+    }
+
+    private void Start () {
         //rotationAngle = 360f - Mathf.Abs(transform.eulerAngles.x);
         leverCo = null;
         audioSrc = GetComponent<AudioSource>();

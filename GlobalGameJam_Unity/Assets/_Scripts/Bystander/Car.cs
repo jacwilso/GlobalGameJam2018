@@ -28,11 +28,16 @@ public class Car : Bystander {
         movementAudio.Play();
 	}
 
+    public override void StopAgent()
+    {
+        base.StopAgent();
+        movementAudio.Stop();
+    }
+
     protected override void TramCollision()
     {
         base.TramCollision();
         ps.Play();
-        movementAudio.Stop();
 
 
 		Material s = Resources.Load<Material>("Wreckage");
