@@ -2316,8 +2316,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitTime: 0
-  skins: {fileID: 0}
-  skinLocation: {fileID: 0}
+  skins: {fileID: 11400000, guid: 6b1866820b991eb4fa4bc62825eeb8d9, type: 2}
+  skinLocation: {fileID: 1305343434758168}
+  soundGroup: {fileID: 0}
   pctRunning: 0
 --- !u!135 &135453285969298438
 SphereCollider:
@@ -2449,7 +2450,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: d56d23189f6d6f149bccd1bdd038b94a, type: 2}
+  - {fileID: 2100000, guid: cafb7bf60f59cf74589f45ada4a1f65e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
