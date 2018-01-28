@@ -9,13 +9,16 @@ public class Man : MonoBehaviour {
     private Animator anim;
 
 	private void Start () {
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
 	}
 	
 	public void Update () {
 		if (Input.GetKeyDown(KeyCode.Space))
         {
             anim.SetTrigger(Anim_Swing);
+        } else if (Input.GetKeyDown(KeyCode.V))
+        {
+            anim.gameObject.SetActive(!anim.gameObject.activeSelf);
         }
 	}
 }
