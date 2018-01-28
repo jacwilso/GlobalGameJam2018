@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26740182c709e5b4b8262f818c251a69, type: 3}
+  m_Name: Girl
+  m_EditorClassIdentifier: 
+  skins:
+  - {fileID: 2100000, guid: b30b1d9b5750420479b123fe286333d0, type: 2}
+  - {fileID: 2100000, guid: d765d087699f68d4f9bffabf23705cfe, type: 2}

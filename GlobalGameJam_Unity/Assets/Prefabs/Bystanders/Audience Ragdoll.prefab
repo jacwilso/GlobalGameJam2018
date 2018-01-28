@@ -1522,8 +1522,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitTime: 0
-  skins: {fileID: 0}
-  skinLocation: {fileID: 0}
+  skins: {fileID: 11400000, guid: fb151266faf899e48a6c4a9a63bddfbb, type: 2}
+  skinLocation: {fileID: 1259191722078902}
+  soundGroup: {fileID: 0}
   pctRunning: 0
 --- !u!114 &114889988805905848
 MonoBehaviour:
@@ -1541,8 +1542,6 @@ MonoBehaviour:
   preRagdollRigidbody: {fileID: 0}
   ragdollRigidbodies: []
   animator: {fileID: 0}
-  bloodNoiseLibrary: {fileID: 0}
-  BloodExplosion: {fileID: 0}
 --- !u!114 &114923268042260830
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1557,13 +1556,6 @@ MonoBehaviour:
   _spatialize: 0
   _defaultVolume: 1
   _clips: []
-  _randomizedClips:
-  - {fileID: 8300000, guid: d21c96b20db2b4f8bbe3e10a367f525e, type: 3}
-  - {fileID: 8300000, guid: d12c5b1e430164aca9203e4240596585, type: 3}
-  - {fileID: 8300000, guid: 8b3a1a7baf89e4aa7ab0c775f81dc00b, type: 3}
-  - {fileID: 8300000, guid: 48fa3cd73db124c26adf8eaf76bba53e, type: 3}
-  - {fileID: 8300000, guid: 7e5562f7875a24d01bcfdf63044f35d2, type: 3}
-  - {fileID: 8300000, guid: e477208e612be49c28cad873700469b7, type: 3}
   _transforms: []
   _numSources: 3
 --- !u!135 &135677018570077660

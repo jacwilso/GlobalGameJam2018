@@ -2419,6 +2419,7 @@ MonoBehaviour:
   waitTime: 0
   skins: {fileID: 0}
   skinLocation: {fileID: 0}
+  soundGroup: {fileID: 0}
   pctRunning: 0
 --- !u!135 &135723616068916820
 SphereCollider:
@@ -2550,7 +2551,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: d56d23189f6d6f149bccd1bdd038b94a, type: 2}
+  - {fileID: 2100000, guid: f4ba4892abc74ca4da397b54da65e499, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2604,7 +2605,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: d56d23189f6d6f149bccd1bdd038b94a, type: 2}
+  - {fileID: 2100000, guid: 62d933fb325252044bece56940af0273, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

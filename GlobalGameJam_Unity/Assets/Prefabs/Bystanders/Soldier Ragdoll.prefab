@@ -1675,8 +1675,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitTime: 0
-  skins: {fileID: 0}
-  skinLocation: {fileID: 0}
+  skins: {fileID: 11400000, guid: 7377682458a31be44b4681f883b4c7da, type: 2}
+  skinLocation: {fileID: 1052362358496030}
+  soundGroup: {fileID: 0}
   pctRunning: 0
 --- !u!114 &114365505342636456
 MonoBehaviour:
@@ -1824,7 +1825,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: d56d23189f6d6f149bccd1bdd038b94a, type: 2}
+  - {fileID: 2100000, guid: 4c0b10093d04bd6408aeaca7e2a342e7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26740182c709e5b4b8262f818c251a69, type: 3}
+  m_Name: Sara
+  m_EditorClassIdentifier: 
+  skins:
+  - {fileID: 2100000, guid: af8095be67c74e04f9f568704a3fa0a8, type: 2}
+  - {fileID: 2100000, guid: bcae4761be1cef140ad8e307d146adc0, type: 2}
