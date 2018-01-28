@@ -10,11 +10,13 @@ public class Car : Bystander {
     {
         base.Start();
         ps = GetComponentInChildren<ParticleSystem>();
+		Debug.Log (ps);
     }
 
     protected override void TramCollision()
     {
         base.TramCollision();
+		Debug.Log ("HIT");
         ps.Play();
     }
 
