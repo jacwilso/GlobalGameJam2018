@@ -55,10 +55,10 @@ public class Bystander : MonoBehaviour {
 
     protected virtual void OnCollisionEnter(Collision collision)
     {
-        Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
+        Rigidbody rb = collision.rigidbody;
+
 		if (collision.gameObject.GetComponent<Tram>() ||
-			(collision.gameObject.layer == LayerMask.NameToLayer("Car") && GetComponent<Car>() == null) ||
-			(collision.gameObject.GetComponent<Car>() != null && collision.rigidbody.velocity.sqrMagnitude > 1f * 1f))
+			(collision.gameObject.layer == LayerMask.NameToLayer("Car") && rb.velocity.sqrMagnitude > .5f))
 		{
             TramCollision();
 			ragdoll.Collision(collision);
