@@ -19,7 +19,7 @@ public class Car : Bystander {
 			if (skinLocation) skinLocation.GetComponent<Renderer>().material = s;
 			foreach (Renderer r in extraSkinLocations)
 			{
-				r.GetComponent<Renderer>().material = s;
+				r.material = s;
 			}
 		}
 	}
@@ -28,6 +28,14 @@ public class Car : Bystander {
     {
         base.TramCollision();
         ps.Play();
-    }
+
+
+		Material s = Resources.Load<Material>("Wreckage");
+		if (skinLocation) skinLocation.GetComponent<Renderer>().material = s;
+		foreach (Renderer r in extraSkinLocations)
+		{
+			r.material = s;
+		}
+	}
 
 }

@@ -77,7 +77,7 @@ public class Ragdoll : MonoBehaviour {
 
 	void OnCollisionEnter(Collision collision)
 	{
-		if (collision.gameObject.layer == LayerMask.NameToLayer("Environment"))
+		if (collision.gameObject.layer == LayerMask.NameToLayer("Environment") && collision.gameObject.GetComponent<Rigidbody>())
 		{
 			collision.gameObject.GetComponent<Rigidbody>().useGravity = true;
 
