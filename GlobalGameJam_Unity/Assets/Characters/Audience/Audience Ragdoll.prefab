@@ -1478,11 +1478,7 @@ MonoBehaviour:
   preRagdollRigidbody: {fileID: 0}
   ragdollRigidbodies: []
   animator: {fileID: 0}
-<<<<<<< HEAD
 --- !u!135 &135677018570077660
-=======
---- !u!135 &135319927717383796
->>>>>>> 5c22ea6a8f793ce667e148b56d00588bdfe60aa0
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
