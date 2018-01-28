@@ -33,3 +33,4 @@ MonoBehaviour:
   - quantity: 20
     bystander: {fileID: 114393119109142106, guid: 8b5c8a780295791489858910c0b38040,
       type: 2}
+  startParade: 1
