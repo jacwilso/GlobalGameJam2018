@@ -13,6 +13,7 @@ public class Person : Bystander {
     [SerializeField] private float pctRunning;
 
     private Animator anim;
+    private ParticleSystem bloodExplosion;
 
     protected new void Start()
     {
@@ -21,6 +22,13 @@ public class Person : Bystander {
         {
             anim = GetComponent<Animator>();
         }
+        bloodExplosion = GetComponentInChildren<ParticleSystem>();
+    }
+
+    protected override void TramCollision()
+    {
+        base.TramCollision();
+        bloodExplosion.Play();
     }
 
     public override void SetDestination(Vector3 point)

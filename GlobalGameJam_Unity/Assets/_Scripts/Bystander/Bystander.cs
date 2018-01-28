@@ -11,6 +11,7 @@ public class Bystander : MonoBehaviour {
 
     [SerializeField] private SkinObject skins;
     [SerializeField] private GameObject skinLocation;
+    [SerializeField] private SoundGroup soundGroup;
 
     protected NavMeshAgent agent;
     private bool wasVisible;
@@ -37,17 +38,17 @@ public class Bystander : MonoBehaviour {
         }
     }
 
-    protected virtual void OnBecameVisible()
+    protected virtual void OnCollisionEnter(Collision collision)
     {
-        wasVisible = true;
+        if (collision.gameObject.GetComponent<Tram>())
+        {
+            TramCollision();
+        }
     }
 
-    protected virtual void OnBecameInvisible()
+    protected virtual void TramCollision()
     {
-        if (wasVisible)
-        {
-            Destroy(gameObject, 1f);
-        }
+        SoundLibrary.instance.PlayRandom(soundGroup);
     }
 
     public virtual void SetDestination(Vector3 point)
