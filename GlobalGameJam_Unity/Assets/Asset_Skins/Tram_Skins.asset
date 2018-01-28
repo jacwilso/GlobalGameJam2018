@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Tram_Skins
   m_EditorClassIdentifier: 
   skins:
-  - {fileID: 2100000, guid: c9bebed4f752a8d4e9eb638d67781691, type: 2}
-  - {fileID: 2100000, guid: 703c14f21edb8b540b3b4a0db63f7475, type: 2}
-  - {fileID: 2100000, guid: e67167cf5639d324b805009f3af27b65, type: 2}
-  - {fileID: 2100000, guid: c62da8f6a6534684296600e3b8ab74c3, type: 2}
+  - {fileID: 2100000, guid: b615849c5eea58d4f89f554f66bed106, type: 2}
+  - {fileID: 2100000, guid: c4734094d37a49142a4d2ffb223828b2, type: 2}
+  - {fileID: 2100000, guid: 1e9b6e5f92e104844b87b5a503526c55, type: 2}
+  - {fileID: 2100000, guid: 9bba1e5c52d651547a36c72e1c5dd982, type: 2}

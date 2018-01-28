@@ -20,7 +20,7 @@ public class Ragdoll : MonoBehaviour {
 	[HideInInspector]
 	public Animator animator;
 
-	void Start () {
+	protected virtual void Start () {
 		preRagdollCollider = GetComponent<Collider>();
 		preRagdollRigidbody = GetComponent<Rigidbody>();
 

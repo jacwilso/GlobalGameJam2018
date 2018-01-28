@@ -56,7 +56,15 @@ public class Tram : MonoBehaviour {
 
 			Ragdoll ragdoll = collision.gameObject.GetComponent<Ragdoll>();
 
-			ragdoll.animator.enabled = false;
+			if (ragdoll.animator) ragdoll.animator.enabled = false;
+
+			if (collision.gameObject.GetComponent<Ragcar>())
+			{
+				foreach (Collider rc in ragdoll.ragdollColliders)
+				{
+					rc.transform.SetParent(null);
+				}
+			}
 
 			// Disable the pre-ragdoll collider and rigidbody
 			ragdoll.preRagdollCollider.enabled = false;
