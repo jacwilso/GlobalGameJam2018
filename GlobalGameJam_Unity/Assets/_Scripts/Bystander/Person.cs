@@ -16,14 +16,28 @@ public class Person : Bystander {
 
     protected new void Start()
     {
-        anim = GetComponent<Animator>();
+        base.Start();
+        if (anim == null)
+        {
+            anim = GetComponent<Animator>();
+        }
     }
 
-    public new void SetDestination(Vector3 point)
+    public override void SetDestination(Vector3 point)
     {
         base.SetDestination(point);
+        if (anim == null)
+        {
+            anim = GetComponent<Animator>();
+        }
         anim.SetBool(Anim_IsMove, true);
         float move = (Random.Range(0, 1f) <= pctRunning) ? 1f : 0f;
         anim.SetFloat(Anim_Move, move);
+    }
+
+    public override void StopAgent()
+    {
+        base.StopAgent();
+        anim.SetBool(Anim_IsMove, false);
     }
 }
