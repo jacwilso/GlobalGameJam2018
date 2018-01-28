@@ -61,17 +61,6 @@ public class Ragdoll : MonoBehaviour
 		}
 	}
 
-	public void Settled()
-	{
-		StartCoroutine(SettleCo());
-	}
-
-	private IEnumerator SettleCo()
-	{
-		yield return new WaitForSeconds(Random.Range(8f, 15f));
-		EnableRagdoll(false, Vector3.zero);
-	}
-
 	public void Collision(Collision collision)
 	{
         Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
@@ -130,4 +119,20 @@ public class Ragdoll : MonoBehaviour
 			rr.AddForce(force, ForceMode.Impulse);
 		}
 	}
+
+    public void Dissolve()
+    {
+        StartCoroutine(DissolveCo());
+    }
+
+    private IEnumerator DissolveCo()
+    {
+        yield return new WaitForSeconds(Random.Range(8f, 15f));
+        for (int i = 0; i < ragdollColliders.Length; i++)
+        {
+            ragdollColliders[i].enabled = false;
+            yield return new WaitForSeconds(Random.Range(0.25f, 0.45f));
+        }
+        Destroy(gameObject, 1f);
+    }
 }
