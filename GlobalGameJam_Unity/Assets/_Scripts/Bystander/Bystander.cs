@@ -23,12 +23,15 @@ public class Bystander : MonoBehaviour {
     private Vector3 destination;
     private float elapsed;
 
+	private Ragdoll ragdoll;
+
     protected virtual void Start () {
         agent = GetComponent<NavMeshAgent>();
         if (skins != null && skinLocation != null)
         {
             skinLocation.GetComponent<Renderer>().material = skins.Skin;
         }
+		ragdoll = GetComponent<Ragdoll>();
     }
 
     protected virtual void Update () {
@@ -53,10 +56,13 @@ public class Bystander : MonoBehaviour {
     protected virtual void OnCollisionEnter(Collision collision)
     {
         Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
-        if (collision.gameObject.GetComponent<Tram>())
-        {
+		if (collision.gameObject.GetComponent<Tram>() ||
+			(collision.gameObject.layer == LayerMask.NameToLayer("Car") && GetComponent<Car>() == null) ||
+			(collision.gameObject.GetComponent<Car>() != null && collision.rigidbody.velocity.sqrMagnitude > 1f * 1f))
+		{
             TramCollision();
-        }
+			ragdoll.Collision(collision);
+		}
         else if (rb != null && collision.gameObject.layer == LayerMask.NameToLayer("Environment"))
         {
             rb.useGravity = true;
