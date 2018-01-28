@@ -29,8 +29,9 @@ public class Parade : MonoBehaviour {
     {
         elapsed = 0;
         int areaIndex = Random.Range(0, 1);
-        Bystander b = Instantiate<Bystander>(vehicles[index].bystander, areas[areaIndex].SpawnArea, Quaternion.identity, areas[areaIndex].transform);
-        b.SetPath(areas[areaIndex].DestinationArea);
+        Bystander b = Instantiate<Bystander>(vehicles[index++].bystander, areas[areaIndex].SpawnArea, Quaternion.identity, areas[areaIndex].transform);
+        b.SetDestination(areas[areaIndex].DestinationArea);
+        index = Mathf.Clamp(index, 0, vehicles.Length - 1);
     }
 
     public void StartParade ()
