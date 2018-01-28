@@ -16,6 +16,7 @@ public class CameraSwitch : MonoBehaviour {
 	void Start ()
 	{
 		sml = GetComponent<SmoothMouseLook>();
+		sml.enabled = onSecondaryCamera;
 	}
 	
 	void Update ()

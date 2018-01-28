@@ -45,7 +45,7 @@ public class WheelRot : MonoBehaviour {
 								
 		for (int i=0; i < wheels.Length; i++){
 			
-			wheels[i].transform.rotation  = Quaternion.Euler ( baseNum * TotalSpeed, 0.0f, 0.0f);
+			wheels[i].transform.Rotate(baseNum * TotalSpeed, 0.0f, 0.0f);
 																	
 		}		
 	}
