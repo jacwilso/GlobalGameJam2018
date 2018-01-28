@@ -22,6 +22,8 @@ public class Ragdoll : MonoBehaviour {
 
 	public AudioSource bloodNoiseSource;
 
+	public ParticleSystem BloodExplosion;
+
 
 	// Use this for initialization
 	void Start () {
@@ -29,6 +31,8 @@ public class Ragdoll : MonoBehaviour {
 		preRagdollRigidbody = GetComponent<Rigidbody>();
 
 		bloodNoiseSource = GetComponent<AudioSource> ();
+
+		BloodExplosion = GetComponentInChildren<ParticleSystem> ();
 
 
 		Collider[] colliders = GetComponentsInChildren<Collider>();
@@ -72,6 +76,13 @@ public class Ragdoll : MonoBehaviour {
 		{
 
 			bloodNoiseSource.Play ();
+
+			ParticleSystem.MainModule main = BloodExplosion.main;
+			//main.startSpeed = collision.collider.GetComponent<Rigidbody> ().velocity;
+
+			BloodExplosion.Play ();
+
+
 			// This gets called in the Tram.cs OnCollisionEnter function now to avoid ordering issue
 			/*preRagdollCollider.enabled = false;
 			preRagdollRigidbody.useGravity = false;
